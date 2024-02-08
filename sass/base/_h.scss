@@ -5,27 +5,13 @@
 
 
 h1{
-    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+    font-size: clamp(1.5rem, -2.075rem + 14vw, 5rem);
+    color: rgba(#000, 0.7);
 }
 
 h2{
-
-}
-
-h3{
-
-}
-
-h4{
-
-}
-
-h5{
-
-}
-
-h6{
-
+    font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+    color: rgba(#000, 0.7);
 }
 
 p{
