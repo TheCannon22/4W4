@@ -18,3 +18,8 @@ h3,h4,h5{
     color: aquamarine;
     font-size: clamp(1rem, 0.917rem + 0.333vw, 1.125rem);
 }
+
+h1:hover , h2:hover, h3:hover, h4:hover, h5:hover{
+    background-color: rgb(255, 255, 255);
+    transition: 3s;
+}
