@@ -35,9 +35,14 @@ h1 {
   color: rgba(0, 0, 0, 0.5);
 }
 
-h2, h3, h4, h5 {
+h2 {
   font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
   color: rgba(0, 0, 0, 0.8);
+}
+
+h3, h4, h5 {
+  color: aquamarine;
+  font-size: clamp(1rem, 0.917rem + 0.333vw, 1.125rem);
 }
 
 /* ///////////////////////////////////////////////////////////////// */
