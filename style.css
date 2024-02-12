@@ -25,16 +25,30 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-arriere-galerie : #1dff74;
   --couleur-arriere-footer: #133d0e;
   */
-  --couleur-arriere-entete: hsl(0, 100%, 50%);
-  --couleur-arriere-accueil: hsl(60, 100%, 50%);
-  --couleur-arriere-evenement: hsl(120, 100%, 50%);
-  --couleur-arriere-galerie: hsl(180, 100%, 50%);
-  --couleur-arriere-footer: hsl(240,100%, 50%);
-  --couleur-entete: hsl(0, 100%, 15%);
-  --couleur-accueil: hsl(60, 100%, 15%);
-  --couleur-evenement: hsl(120, 100%, 15%);
-  --couleur-galerie: hsl(180, 100%, 15%);
-  --couleur-footer: hsl(240,100%, 15%);
+  --nb-element: 5;
+  --increment-angle: calc(360/var(--nb-element));
+  --angle-initial: 180;
+  --hu1: var(--angle-initial);
+  --hu2: calc(var(--hu1) + var(--increment-angle));
+  --hu3: calc(var(--hu2) + var(--increment-angle));
+  --hu4: calc(var(--hu3) + var(--increment-angle));
+  --hu5: calc(var(--hu4) + var(--increment-angle));
+  /*Couleur arrière-plan*/
+  --s-couleur-arriere: 100%;
+  --l-couleur-arriere: 50%;
+  /* Couleur avant-plan */
+  --s-couleur: 100%;
+  --l-couleur: 15%;
+  --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --couleur-arriere-evenement: hsl(var(--hu3), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --couleur-arriere-galerie: hsl(var(--hu4), var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --couleur-arriere-footer: hsl(var(--hu5),var(--s-couleur-arriere), var(--l-couleur-arriere));
+  --couleur-entete: hsl(var(--hu1), var(--s-couleur), var(--l-couleur));
+  --couleur-accueil: hsl(var(--hu2), var(--s-couleur), var(--l-couleur));
+  --couleur-evenement: hsl(var(--hu3), var(--s-couleur), var(--l-couleur));
+  --couleur-galerie: hsl(var(--hu4), var(--s-couleur), var(--l-couleur));
+  --couleur-footer: hsl(var(--hu5),var(--s-couleur), var(--l-couleur));
 }
 
 /* ///////////////////////////////////////////////////////////////// */
