@@ -1,0 +1,23 @@
+.vague {
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.vague svg {
+    position: relative;
+    display: block;
+    width: calc(126% + 1.3px);
+    height: 110px;
+}
+
+@media (min-width: 767px) {
+    .vague svg{
+        width: calc(126% + 1.3px);
+        height: 110px;
+    }
+}

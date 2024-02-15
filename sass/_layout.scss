@@ -13,7 +13,6 @@ body{
 .global>section, .global > header, .global > footer{
     // Flex : grow shrink basis;
     flex: 0 1 1000px;
-    background-color: rgba(#0f0101, .1);
     padding: 5rem;
 }
 
@@ -33,6 +32,7 @@ footer{
 #entete{
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
+    position: relative;
 }
 
 #accueil{
@@ -43,11 +43,14 @@ footer{
 #galerie{
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
+    z-index: 1;
+    background: linear-gradient(180deg, var(--couleur-arriere-accueil), var(--couleur-arriere-evenement));
 }
 
 #evenement{
     background-color: var(--couleur-arriere-evenement);
     color: var(--couleur-evenement);
+    position: relative;
 }
 
 #footer{
