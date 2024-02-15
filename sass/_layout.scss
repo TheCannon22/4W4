@@ -40,6 +40,42 @@ footer{
     flex-direction: column;
 }
 
+/* Styles pour le link (a) */
+a {
+    color: #007BFF;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Styles pour le blockquote */
+blockquote {
+    border-left: 4px solid #007BFF;
+    margin: 10px 0;
+    padding-left: 15px;
+}
+
+/* Styles pour le button */
+button {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/*Les grandes zones dans la page principale*/
+
 #accueil{
     background-color: var(--couleur-arriere-accueil);
     color: var(--couleur-accueil);
@@ -58,7 +94,45 @@ footer{
     position: relative;
 }
 
+.evenement__section{
+    display: flex;
+    flex-direction: column;
+}
+
 #footer{
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
+    padding: 20px 0;
+}
+
+.footer__section {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer__content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.footer__column {
+    flex: 1;
+    margin: 0 10px;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    margin-bottom: 8px;
+}
+
+blockquote {
+    border-left: 4px solid black;
+    margin: 10px 0;
+    padding-left: 15px;
 }
