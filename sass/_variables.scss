@@ -13,7 +13,7 @@
     --nb-element : 5;
     --increment-angle : calc(360/var(--nb-element));
     // 360 / 5 = 72
-    --angle-initial: 224;
+    --angle-initial: 80;
     --hu1 : var(--angle-initial);
     --hu2 : calc(var(--hu1) + var(--increment-angle));
     --hu3 : calc(var(--hu2) + var(--increment-angle));
@@ -44,11 +44,14 @@
     */
 
     // Couleur complémentaire
-    --hu2: calc(var(--hu1) + 180);
+    --hu2: calc(var(--hu1) + 10);
+    --hu3: calc(var(--hu1) + 10);
+    --hu4 : calc(var(--hu1) + 10);
+    --hu5 : calc(var(--hu1) + 10);
 
     --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
-    --couleur-arriere-accueil: hsl(var(--hu1), var(--s-couleur-arriere), 65%);
-    --couleur-arriere-evenement: hsl(var(--hu1), var(--s-couleur-arriere), 70%);
-    --couleur-arriere-galerie : hsl(var(--hu2), var(--s-couleur-arriere), 75%);
-    --couleur-arriere-footer: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+    --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 65%);
+    --couleur-arriere-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 70%);
+    --couleur-arriere-galerie : hsl(var(--hu4), var(--s-couleur-arriere), 75%);
+    --couleur-arriere-footer: hsl(var(--hu5),var(--s-couleur-arriere), 80%);
 }
