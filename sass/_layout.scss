@@ -99,7 +99,7 @@ button:hover {
     flex-direction: column;
 }
 
-#footer{
+#footer {
     background-color: var(--couleur-arriere-footer);
     color: var(--couleur-footer);
     padding: 20px 0;
@@ -113,7 +113,7 @@ button:hover {
 .footer__content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: center;
 }
 
 .footer__column {

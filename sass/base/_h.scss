@@ -27,9 +27,3 @@ h5 {
 h6 {
     font-size: clamp(0.8rem, 0.8rem + 0.8vw, 1rem);
 }
-
-
-h1:hover , h2:hover, h3:hover, h4:hover, h5:hover{
-    background-color: rgb(255, 255, 255);
-    transition: 3s;
-}

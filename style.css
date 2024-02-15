@@ -92,11 +92,6 @@ h6 {
   font-size: clamp(0.8rem, 0.8rem + 0.8vw, 1rem);
 }
 
-h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
-  background-color: rgb(255, 255, 255);
-  transition: 3s;
-}
-
 /* ///////////////////////////////////////////////////////////////// */
 /* Règles de la pagination                                           */
 /* ///////////////////////////////////////////////////////////////// */
@@ -212,7 +207,7 @@ button:hover {
 .footer__content {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: center;
 }
 
 .footer__column {
