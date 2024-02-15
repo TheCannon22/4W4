@@ -53,9 +53,9 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-footer: hsl(var(--hu5),var(--s-couleur), var(--l-couleur));
   */
   --hu2: calc(var(--hu1) + 10);
-  --hu3: calc(var(--hu1) + 10);
-  --hu4: calc(var(--hu1) + 10);
-  --hu5: calc(var(--hu1) + 10);
+  --hu3: calc(var(--hu2) + 10);
+  --hu4: calc(var(--hu3) + 10);
+  --hu5: calc(var(--hu4) + 10);
   --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
   --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 65%);
   --couleur-arriere-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 70%);
@@ -69,16 +69,27 @@ Ce thème a été développé dans le cadre du cours 4W4
 /*https://clamp.font-size.app/?config=eyJyb290IjoiMTYiLCJtaW5XaWR0aCI6IjUwMHB4IiwibWF4V2lkdGgiOiI5MDBweCIsIm1pbkZvbnRTaXplIjoiMTZweCIsIm1heEZvbnRTaXplIjoiNDhweCJ9*/
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/clamp*/
 h1 {
-  font-size: clamp(1.5rem, -2.075rem + 14vw, 5rem);
+  font-size: clamp(2rem, 2.075rem + 4vw, 5rem);
 }
 
 h2 {
-  font-size: clamp(1rem, -0.5714rem + 6.2857vw, 3.75rem);
+  font-size: clamp(1.5rem, 0.5714rem + 3.7143vw, 3.75rem);
 }
 
-h3, h4, h5 {
-  color: aquamarine;
-  font-size: clamp(1rem, 0.917rem + 0.333vw, 1.125rem);
+h3 {
+  font-size: clamp(1.25rem, 1.25rem + 2.5vw, 2.125rem);
+}
+
+h4 {
+  font-size: clamp(1rem, 1rem + 1.5vw, 1.5rem);
+}
+
+h5 {
+  font-size: clamp(0.9rem, 0.9rem + 1vw, 1.25rem);
+}
+
+h6 {
+  font-size: clamp(0.8rem, 0.8rem + 0.8vw, 1rem);
 }
 
 h1:hover, h2:hover, h3:hover, h4:hover, h5:hover {
@@ -123,6 +134,11 @@ footer {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
+}
+
+.entete__header {
+  display: flex;
+  flex-direction: column;
 }
 
 #accueil {

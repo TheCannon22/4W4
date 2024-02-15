@@ -32,7 +32,12 @@ footer{
 #entete{
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
-    position: relative;
+    position: relative;    
+}
+
+.entete__header{
+    display: flex;    
+    flex-direction: column;
 }
 
 #accueil{

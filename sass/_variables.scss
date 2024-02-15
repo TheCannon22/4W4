@@ -45,9 +45,9 @@
 
     // Couleur complémentaire
     --hu2: calc(var(--hu1) + 10);
-    --hu3: calc(var(--hu1) + 10);
-    --hu4 : calc(var(--hu1) + 10);
-    --hu5 : calc(var(--hu1) + 10);
+    --hu3: calc(var(--hu2) + 10);
+    --hu4 : calc(var(--hu3) + 10);
+    --hu5 : calc(var(--hu4) + 10);
 
     --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
     --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 65%);
