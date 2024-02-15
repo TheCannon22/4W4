@@ -22,6 +22,11 @@ header, section{
     align-items: center;
 }
 
+.galerie__section{
+    display: flex;
+    flex-direction: column;    
+}
+
 footer{
     display: flex;
     flex-direction: column;
