@@ -27,7 +27,7 @@
 
     /* Couleur avant-plan */
     --s-couleur : 100%; //Saturation
-    --l-couleur : 15%; //Luminosité
+    --l-couleur : 80%; //Luminosité
 
     --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
     --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), var(--l-couleur-arriere));
