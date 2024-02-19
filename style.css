@@ -66,6 +66,11 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 30%);
   --couleur-galerie: hsl(var(--hu4), var(--s-couleur-arriere), 35%);
   --couleur-footer: hsl(var(--hu5),var(--s-couleur-arriere), 40%);
+  --couleur-lien: #333;
+  --couleur-lien-hover: #fff;
+  --couleur-lien-visited: #d32f2f;
+  --couleur-bouton-linear-gradient-1: #31572c ;
+  --couleur-bouton-linear-gradient-2: rgb(93, 165, 85);
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -99,17 +104,29 @@ h6 {
 
 button {
   font-size: clamp(1.25rem, 0.2083rem + 3.3333vw, 2.5rem);
-  background-image: linear-gradient(#31572c);
+  background-image: linear-gradient(90deg, var(--couleur-bouton-linear-gradient-1), var(--couleur-bouton-linear-gradient-2));
   color: #fff;
-  padding: 10px 20px;
+  padding: 12px 24px;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease;
+  transform: scale(1);
 }
-
 button:hover {
-  background-color: #4f772d;
+  background-image: linear-gradient(90deg, var(--couleur-bouton-linear-gradient-2), var(--couleur-bouton-linear-gradient-1));
+  transform: scale(1.2);
+}
+a {
+  color: var(--couleur-lien);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+a:hover, a:focus {
+  color: var(--couleur-lien-hover);
+}
+a:visited {
+  color: var(--couleur-lien-visited);
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -167,17 +184,6 @@ footer {
   flex-direction: column;
 }
 
-/* Styles pour le link (a) */
-a {
-  color: #31572c;
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-a:hover {
-  color: #4f772d;
-}
-
 /* Styles pour le blockquote */
 blockquote {
   border-left: 4px solid #31572c;
@@ -189,6 +195,11 @@ blockquote {
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
+}
+
+.accueil__section {
+  display: flex;
+  flex-direction: column;
 }
 
 #galerie {

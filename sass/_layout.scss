@@ -51,17 +51,6 @@ footer{
     flex-direction: column;
 }
 
-/* Styles pour le link (a) */
-a {
-    color: #31572c;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-a:hover {
-    color: #4f772d;
-}
-
 /* Styles pour le blockquote */
 blockquote {
     border-left: 4px solid #31572c;
@@ -73,6 +62,11 @@ blockquote {
 #accueil{
     background-color: var(--couleur-arriere-accueil);
     color: var(--couleur-accueil);
+}
+
+.accueil__section {
+    display: flex;
+    flex-direction: column;
 }
 
 #galerie{

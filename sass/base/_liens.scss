@@ -1,0 +1,13 @@
+a {
+    color: var(--couleur-lien);
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover,&:focus {
+        color: var(--couleur-lien-hover);
+    }
+
+    &:visited{
+        color: var(--couleur-lien-visited);
+    }
+}
