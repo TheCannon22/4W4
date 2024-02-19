@@ -2,6 +2,7 @@ body{
     display: flex;
     flex-direction: column;
     font-family: "roboto", sans-serif;
+    box-sizing: border-box;
 }
 
 .global{
@@ -10,9 +11,14 @@ body{
     min-height: 30vh;
 }
 
-.global>section, .global > header, .global > footer{
+.global>section, .global > footer{
     // Flex : grow shrink basis;
-    flex: 0 1 1000px;
+    flex: 0 1 900px;
+    padding: 5rem;
+}
+
+.global > header{
+    flex: 0 1 1300px;
     padding: 5rem;
 }
 
@@ -62,23 +68,6 @@ blockquote {
     margin: 10px 0;
     padding-left: 15px;
 }
-
-/* Styles pour le button */
-button {
-    background-color: #31572c;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-button:hover {
-    background-color: #4f772d;
-}
-
-
 /*Les grandes zones dans la page principale*/
 
 #accueil{

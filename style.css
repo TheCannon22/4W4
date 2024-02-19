@@ -61,6 +61,11 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-arriere-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 70%);
   --couleur-arriere-galerie: hsl(var(--hu4), var(--s-couleur-arriere), 75%);
   --couleur-arriere-footer: hsl(var(--hu5),var(--s-couleur-arriere), 80%);
+  --couleur-entete: hsl(var(--hu1), var(--s-couleur-arriere), 20%);
+  --couleur-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 25%);
+  --couleur-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 30%);
+  --couleur-galerie: hsl(var(--hu4), var(--s-couleur-arriere), 35%);
+  --couleur-footer: hsl(var(--hu5),var(--s-couleur-arriere), 40%);
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -92,6 +97,21 @@ h6 {
   font-size: clamp(0.8rem, 0.8rem + 0.8vw, 1rem);
 }
 
+button {
+  font-size: clamp(1.25rem, 0.2083rem + 3.3333vw, 2.5rem);
+  background-image: linear-gradient(#31572c);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #4f772d;
+}
+
 /* ///////////////////////////////////////////////////////////////// */
 /* Règles de la pagination                                           */
 /* ///////////////////////////////////////////////////////////////// */
@@ -99,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   font-family: "roboto", sans-serif;
+  box-sizing: border-box;
 }
 
 .global {
@@ -107,8 +128,13 @@ body {
   min-height: 30vh;
 }
 
-.global > section, .global > header, .global > footer {
-  flex: 0 1 1000px;
+.global > section, .global > footer {
+  flex: 0 1 900px;
+  padding: 5rem;
+}
+
+.global > header {
+  flex: 0 1 1300px;
   padding: 5rem;
 }
 
@@ -157,21 +183,6 @@ blockquote {
   border-left: 4px solid #31572c;
   margin: 10px 0;
   padding-left: 15px;
-}
-
-/* Styles pour le button */
-button {
-  background-color: #31572c;
-  color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #4f772d;
 }
 
 /*Les grandes zones dans la page principale*/
@@ -236,6 +247,16 @@ blockquote {
   padding-left: 15px;
 }
 
+.entete__header {
+  background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.entete__header span {
+  display: block;
+}
+
 .vague {
   position: absolute;
   bottom: -1px;
@@ -259,6 +280,10 @@ blockquote {
     height: 110px;
   }
 }
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .diagonal {
   position: relative;
   isolation: isolate;
