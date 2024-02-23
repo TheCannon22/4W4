@@ -268,6 +268,11 @@ blockquote {
   display: block;
 }
 
+@media screen and (max-width: 1000px) {
+  .entete__header {
+    background-position: center center;
+  }
+}
 .vague {
   position: absolute;
   bottom: -1px;
