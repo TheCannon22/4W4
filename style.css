@@ -324,4 +324,52 @@ ul li {
   z-index: -1;
   transform: skewY(-5deg);
   background-color: var(--couleur-arriere-galerie);
+}
+
+/* ///////////////////////////////////////////////////////////////// */
+/* Les différentes composantes du site                               */
+/* ///////////////////////////////////////////////////////////////// */
+.recherche {
+  display: flex;
+  border: 1px solid #aaa;
+  justify-content: center;
+}
+
+.recherche__input {
+  display: block;
+}
+
+/* Styles pour le bouton de recherche */
+.recherche__button {
+  background-color: grey;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Ajout de styles au survol du bouton */
+.recherche__button:hover {
+  background-color: #fff;
+  color: #31572c;
+}
+
+/* Ajout d'une animation au survol */
+.recherche__button:hover {
+  animation: buttonHover 0.3s ease-out;
+}
+
+/* Définition de l'animation */
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
 }/*# sourceMappingURL=style.css.map */
