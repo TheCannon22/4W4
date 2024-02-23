@@ -72,6 +72,7 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-bouton-linear-gradient-1: #31c5ff ;
   --couleur-bouton-linear-gradient-2: rgb(41, 141, 255);
   --couleur-dedans-blockquote:#f5f5f5;
+  --couleur-reseaux-sociaux: white;
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -384,5 +385,5 @@ ul li {
 }
 
 .sociaux svg {
-  fill: var(--couleur-bouton-linear-gradient-1);
+  fill: var(--couleur-reseaux-sociaux);
 }/*# sourceMappingURL=style.css.map */
