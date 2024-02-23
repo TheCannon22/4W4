@@ -372,4 +372,13 @@ ul li {
   100% {
     transform: scale(1);
   }
+}
+.sociaux {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.sociaux svg {
+  fill: var(--couleur-bouton-linear-gradient-1);
 }/*# sourceMappingURL=style.css.map */
