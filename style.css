@@ -224,6 +224,24 @@ blockquote {
   flex-direction: column;
 }
 
+/* ///////////////////////////////////////////////////////////////// */
+/* Sections de la page                                               */
+/* ///////////////////////////////////////////////////////////////// */
+.entete__header {
+  background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
+  background-repeat: no-repeat;
+  background-position: 100% 50%;
+}
+
+.entete__header span {
+  display: block;
+}
+
+@media screen and (max-width: 1000px) {
+  .entete__header {
+    background-position: center center;
+  }
+}
 #footer {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
@@ -231,8 +249,13 @@ blockquote {
 }
 
 .footer__section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .footer__content {
@@ -256,21 +279,9 @@ ul li {
   margin-bottom: 8px;
 }
 
-.entete__header {
-  background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
-  background-repeat: no-repeat;
-  background-position: 100% 50%;
-}
-
-.entete__header span {
-  display: block;
-}
-
-@media screen and (max-width: 1000px) {
-  .entete__header {
-    background-position: center center;
-  }
-}
+/* ///////////////////////////////////////////////////////////////// */
+/* Les différents effets de la page                                  */
+/* ///////////////////////////////////////////////////////////////// */
 .vague {
   position: absolute;
   bottom: -1px;
