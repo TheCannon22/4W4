@@ -50,13 +50,16 @@ footer{
     display: flex;    
     flex-direction: column;
 }
-
 /* Styles pour le blockquote */
 blockquote {
-    border-left: 4px solid #31572c;
-    margin: 10px 0;
-    padding-left: 15px;
+    border-left: 4px solid var(--couleur-bouton-linear-gradient-1);
+    margin: 20px 0;
+    padding: 15px;
+    background-color: var(--couleur-dedans-blockquote);
+    color: #333;
+    font-style: italic;
 }
+
 /*Les grandes zones dans la page principale*/
 
 #accueil{
@@ -119,8 +122,4 @@ ul li {
     margin-bottom: 8px;
 }
 
-blockquote {
-    border-left: 4px solid black;
-    margin: 10px 0;
-    padding-left: 15px;
-}
+
