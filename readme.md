@@ -25,5 +25,5 @@
 - Une github-page
 
 
-### Ma github-page 
+### Ma github-page (exercice 1)
 https://thecannon22.github.io/4W4/
