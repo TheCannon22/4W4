@@ -27,5 +27,5 @@
 - Réglage global de la page (0.5 points)
 
 
-### Ma github-page (exercice 1)
+### Ma github-page (Laboratoire 3)
 https://thecannon22.github.io/4W4/
