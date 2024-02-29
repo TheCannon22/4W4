@@ -1,12 +1,12 @@
-# Laboratoire #3
+# Laboratoire #3 fait par Alexander Rankov
 ## Création d'un site WP
 - Adaptation du thème de l'exercice 1
 - Création du modèle index.php
 - Création de la branche labo3
 - minimum 3 commits 
 - Un Readme.md qui contiendra:
-    - Le nom de l'auteur
-    - L'objectif du labo3
+    - Le nom de l'auteur (Mon nom est Alexander Rankov)
+    - L'objectif du labo3 (L'objectif du labo3 est de créer une page WordPress)
     - Les réalisations
     - Un lien vers la github-page
 
