@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thème gr2</title>
+
+    <!-- <link rel="stylesheet" href="normalize.css"> -->
+    <!-- <link rel="stylesheet" href="style.css">  -->
+
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/normalize.css';?>">
     <link rel="stylesheet" href="<?php echo get_template_directory_uri() . '/style.css'; ?>">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -41,10 +45,17 @@
                 }
                 -->                
             <?php if(have_posts()):
-                    while(have_posts()): the_post(); ?>
+                    while(have_posts()): the_post();
+                    $titre = get_the_title();
+                    $sigle = substr($titre,0,7);
+                    // strpos()
+
+                    ?>
+
                     <div class="carte">
-                        <h4><?php the_title(); ?> </h4>
-                        <p><?php echo wp_trim_words(get_the_content(), 10); ?> </p>
+                        <h5><?php echo $sigle; ?></h5>
+                        <h4><?php echo $titre; ?> </h4>
+                        <p><?php echo wp_trim_words(get_the_content(), 30); ?> </p>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>            
