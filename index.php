@@ -137,14 +137,6 @@
                         <li><a href="entete">Lien 9</a></li>
                     </ul>
                 </div>
-                <div class="footer__column">
-                    <h4>Liens</h4>
-                    <ul>
-                        <li><a href="entete">Lien 10</a></li>
-                        <li><a href="entete">Lien 11</a></li>
-                        <li><a href="entete">Lien 12</a></li>
-                    </ul>
-                </div>
             </div>
         </footer>
     </div>

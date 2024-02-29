@@ -92,11 +92,7 @@ h3 {
   font-size: clamp(1.25rem, 1.25rem + 2.5vw, 2.125rem);
 }
 
-h4, p {
-  font-size: clamp(1rem, 1rem + 1.5vw, 1.5rem);
-}
-
-h5 {
+h4, h5, p {
   font-size: clamp(0.9rem, 0.9rem + 1vw, 1.25rem);
 }
 
@@ -399,6 +395,7 @@ ul li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   flex: 1 1 25%;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
 }/*# sourceMappingURL=style.css.map */
