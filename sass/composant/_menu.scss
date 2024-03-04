@@ -15,23 +15,46 @@
 </div>
 */
 
-.entete_menu{
-    border: 1px solid red;
-}
-
-.menu-entete-container{
-    // div
-    
-    width: 100%;
-}
-
-.menu{
-    // ul
-    display: flex;
-    justify-content: space-between;
-    list-style-type: none;
-}
-
-.menu-item{
-    // li
-}
+#menu {
+    &.global {
+      .entete_menu {
+        background-color: var(--couleur-bouton-linear-gradient-2);
+  
+        .menu-entete-container {
+          width: 100%;
+  
+          .menu {
+            display: flex;
+            justify-content: space-between;
+            list-style-type: none;
+            padding: 0;
+  
+            .menu-item {
+              margin: 0;
+              padding: 10px;
+              transition: background-color 0.3s ease;
+  
+              &:hover {
+                background-color: var(--couleur-lien-hover-menu);
+              }
+  
+              a {
+                text-decoration: none;
+                color: var(--couleur-lien-menu);
+                font-weight: bold;
+  
+                &:hover {
+                  color: var(--couleur-lien-hover);
+                }
+              }
+  
+              &.current-menu-item {
+                background-color: var(--couleur-lien-actuel-menu);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  

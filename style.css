@@ -69,6 +69,9 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-lien: #333;
   --couleur-lien-hover: #fff;
   --couleur-lien-visited: #a600ff;
+  --couleur-lien-menu: #fff;
+  --couleur-lien-hover-menu: #333;
+  --couleur-lien-actuel-menu: grey;
   --couleur-bouton-linear-gradient-1: #31c5ff ;
   --couleur-bouton-linear-gradient-2: rgb(41, 141, 255);
   --couleur-dedans-blockquote:#f5f5f5;
@@ -147,8 +150,13 @@ body {
   min-height: 30vh;
 }
 
-.global > section, .global > footer, .global > .entete_menu {
+.global > section, .global > footer {
   flex: 0 1 900px;
+  padding: 5rem;
+}
+
+.global > .entete_menu {
+  flex: 0 1 100%;
   padding: 5rem;
 }
 
@@ -434,16 +442,34 @@ ul li {
     </div>
 </div>
 */
-.entete_menu {
-  border: 1px solid red;
+#menu.global .entete_menu {
+  background-color: var(--couleur-bouton-linear-gradient-2);
 }
-
-.menu-entete-container {
+#menu.global .entete_menu .menu-entete-container {
   width: 100%;
 }
-
-.menu {
+#menu.global .entete_menu .menu-entete-container .menu {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+  padding: 0;
+}
+#menu.global .entete_menu .menu-entete-container .menu .menu-item {
+  margin: 0;
+  padding: 10px;
+  transition: background-color 0.3s ease;
+}
+#menu.global .entete_menu .menu-entete-container .menu .menu-item:hover {
+  background-color: var(--couleur-lien-hover-menu);
+}
+#menu.global .entete_menu .menu-entete-container .menu .menu-item a {
+  text-decoration: none;
+  color: var(--couleur-lien-menu);
+  font-weight: bold;
+}
+#menu.global .entete_menu .menu-entete-container .menu .menu-item a:hover {
+  color: var(--couleur-lien-hover);
+}
+#menu.global .entete_menu .menu-entete-container .menu .menu-item.current-menu-item {
+  background-color: var(--couleur-lien-actuel-menu);
 }/*# sourceMappingURL=style.css.map */
