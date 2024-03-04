@@ -17,9 +17,9 @@
 <body>
     <div id="entete" class="global">
         <header class="entete__header">
-            <h1>Thème d'Alexander</h1>
-            <h2>4W4 - Conception d'interface <span>et développement web</span></h2>
-            <h3>TIM - Collège de Maisonneuve</h3>
+            <h1 class="bgc-text">Thème d'Alexander</h1>
+            <h2 class="bgc-text">4W4 - Conception d'interface <span>et développement web</span></h2>
+            <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
             <button class="entete__button">Évenements</button>
         </header>
         <div class="vague">
@@ -48,17 +48,18 @@
                     while(have_posts()): the_post();
                     $titre = get_the_title();
                     $sigle = substr($titre,0,7);
-                    $titreCours = substr($titre, 7, -6);
-                    $dureeCours = substr($titre, -6);
+                    $pos_parenthese = strpos($titre, '(');
+                    $dureeCours = substr($titre, $pos_parenthese + 1, -1);
+                    $titreCours = substr($titre, 7, $pos_parenthese - 7);
                     // strpos()
 
                     ?>
 
                     <div class="carte">
-                        <h3><?php echo $sigle; ?></h3>
+                        <h5><?php echo $sigle; ?></h5>
                         <h4><?php echo $titreCours; ?> </h4>
-                        <h4><?php echo $dureeCours; ?> </h4>
-                        <p><?php echo wp_trim_words(get_the_content(), 30); ?> </p>
+                        <p><?php echo wp_trim_words(get_the_content(), 10); ?> </p>
+                        <h5>Durée : <?php echo $dureeCours; ?> </h5>
                     </div>
                     <?php endwhile; ?>
                     <?php endif; ?>            

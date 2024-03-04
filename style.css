@@ -281,6 +281,19 @@ ul li {
 }
 
 /* ///////////////////////////////////////////////////////////////// */
+/* Class utile                                                       */
+/* ///////////////////////////////////////////////////////////////// */
+.bgc-text {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+}
+@media screen and (min-width: 900px) {
+  .bgc-text {
+    background-color: transparent;
+  }
+}
+
+/* ///////////////////////////////////////////////////////////////// */
 /* Les différents effets de la page                                  */
 /* ///////////////////////////////////////////////////////////////// */
 .vague {
@@ -394,9 +407,13 @@ ul li {
   padding: 1.5rem;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex: 1 1 25%;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
   border-radius: 20px;
+}
+
+.carte * {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
