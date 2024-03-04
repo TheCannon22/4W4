@@ -15,6 +15,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="menu" class="global">
+        <div class="entete_menu">
+            <?php wp_nav_menu(); ?>
+        </div>
+    </div>
     <div id="entete" class="global">
         <header class="entete__header">
             <h1 class="bgc-text">Thème d'Alexander</h1>

@@ -11,14 +11,14 @@ body{
     min-height: 30vh;
 }
 
-.global>section, .global > footer{
+.global>section, .global > footer, .global > .entete_menu{
     // Flex : grow shrink basis;
     flex: 0 1 900px;
     padding: 5rem;
 }
 
 .global > header{
-    flex: 0 1 1300px;
+    flex: 0 1 1100px;
     padding: 5rem;
 }
 
