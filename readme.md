@@ -8,12 +8,14 @@
 
 ### Création d'un header.php
 
-- 
+- Celle-ci contiendra la structure d'entête de la page qui sera reproduite dans chacun des modules du thème
+- Créer un template-part qui permettra d'afficher les vagues.
 
 ### Barème de correction 
-- Organisation du code, 3 commits (3 points)
-- Résultat sous forme de github-page (0.5 points)
-- Réglage global de la page (0.5 points)
+- Intégration de chacun des éléments précédents de façon structuré. (1 point)
+- Création d'une github-page à partir de index.htm
+production de 5 commits
+- Design général de la page (1 point)
 
 
 ### Ma github-page (Laboratoire 3)

@@ -15,7 +15,10 @@ body {
     padding: 5rem;
   }
   
-  
+  .entete_menu{
+    z-index: 1;
+  }
+
   header, section {
     display: flex;
     justify-content: center;
