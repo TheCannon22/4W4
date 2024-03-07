@@ -70,12 +70,13 @@ Ce thème a été développé dans le cadre du cours 4W4
   --couleur-lien-hover: #333;
   --couleur-lien-visited: #a600ff;
   --couleur-lien-menu: #fff;
-  --couleur-lien-hover-menu: #333;
+  --couleur-lien-hover-menu: black;
   --couleur-lien-actuel-menu: grey;
   --couleur-bouton-linear-gradient-1: #31c5ff ;
   --couleur-bouton-linear-gradient-2: rgb(41, 141, 255);
   --couleur-dedans-blockquote:#f5f5f5;
   --couleur-reseaux-sociaux: white;
+  --couleur-arriere-vague: (var(--hu2), var(--s-couleur-arriere), 65%);
 }
 
 /* ///////////////////////////////////////////////////////////////// */
@@ -140,27 +141,16 @@ a:visited {
 body {
   display: flex;
   flex-direction: column;
-  font-family: "roboto", sans-serif;
+  font-family: "Roboto", sans-serif;
   box-sizing: border-box;
 }
 
 .global {
   display: flex;
   justify-content: center;
-  min-height: 30vh;
 }
 
 .global > section, .global > footer {
-  flex: 0 1 900px;
-  padding: 5rem;
-}
-
-.global > .entete_menu {
-  flex: 0 1 100%;
-  padding: 5rem;
-}
-
-.global > header {
   flex: 0 1 1100px;
   padding: 5rem;
 }
@@ -169,6 +159,15 @@ header, section {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+#menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.entete_menu {
+  display: flex;
 }
 
 .galerie__section {
@@ -194,7 +193,6 @@ footer {
   flex-direction: column;
 }
 
-/* Styles pour le blockquote */
 blockquote {
   border-left: 4px solid var(--couleur-bouton-linear-gradient-1);
   margin: 20px 0;
@@ -204,7 +202,6 @@ blockquote {
   font-style: italic;
 }
 
-/*Les grandes zones dans la page principale*/
 #accueil {
   background-color: var(--couleur-arriere-accueil);
   color: var(--couleur-accueil);
@@ -321,6 +318,10 @@ ul li {
   height: 110px;
 }
 
+.remplissage {
+  fill: var(--couleur-arriere-vague);
+}
+
 @media (min-width: 767px) {
   .vague svg {
     width: calc(126% + 1.3px);
@@ -427,49 +428,66 @@ ul li {
 }
 
 /*
-<div id="menu" class="global">
-    <div class="entete_menu">
-    // Générer par wp_nav_menu()
-        <div class="menu-entete-container">
-            <ul id="menu-entete" class="menu">
-                <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-30"><a href="http://localhost:8080/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/" aria-current="page">Technologies émergentes en création</a></li>
-                <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost:8080/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
-                <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost:8080/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
-                <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-                <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-            </ul>
-        </div>        
-    </div>
-</div>
+
+<nav class="menu-principal-container">
+<ul id="menu-principal" class="menu">
+  <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-30"><a href="http://localhost:8080/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies émergentes en création</a></li>
+  <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost:8080/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
+  <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost:8080/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
+  <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
+  <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
+  <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="#accueil">Accueil</a></li>
+  <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"><a href="#galerie">Galerie</a></li>
+  <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="#evenement">Événement</a></li>
+</ul></nav>        
 */
-#menu.global .entete_menu {
-  background-color: var(--couleur-bouton-linear-gradient-2);
+/* Style for the navigation container */
+.menu-principal-container {
+  position: absolute;
+  top: 0;
+  left: 0;
 }
-#menu.global .entete_menu .menu-entete-container {
-  width: 100%;
+@media screen and (min-width: 768px) {
+  .menu-principal-container {
+    position: static;
+  }
 }
-#menu.global .entete_menu .menu-entete-container .menu {
+
+/* Style for the navigation menu */
+#menu-principal {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   list-style-type: none;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: blue;
+  flex: 0 1 100%;
+  padding: 5rem;
   padding: 0;
 }
-#menu.global .entete_menu .menu-entete-container .menu .menu-item {
-  margin: 0;
-  padding: 10px;
-  transition: background-color 0.3s ease;
+@media screen and (min-width: 768px) {
+  #menu-principal {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
-#menu.global .entete_menu .menu-entete-container .menu .menu-item:hover {
-  background-color: var(--couleur-lien-hover-menu);
+
+/* Style for each navigation item (list item) */
+.menu-item {
+  color: black;
 }
-#menu.global .entete_menu .menu-entete-container .menu .menu-item a {
+
+/* Optional: Add some styling for the links */
+.menu-item a {
   text-decoration: none;
-  color: var(--couleur-lien-menu);
-  font-weight: bold;
+  color: inherit; /* Inherit color from the parent .menu-item */
+  padding: 10px; /* Add padding to make it visually appealing */
+  display: block; /* Make the entire link area clickable */
 }
-#menu.global .entete_menu .menu-entete-container .menu .menu-item a:hover {
-  color: var(--couleur-lien-hover);
-}
-#menu.global .entete_menu .menu-entete-container .menu .menu-item.current-menu-item {
-  background-color: var(--couleur-lien-actuel-menu);
+
+/* Optional: Style for the active link */
+.menu-item a:hover {
+  background-color: lightgray;
+  border-radius: 5px;
 }/*# sourceMappingURL=style.css.map */

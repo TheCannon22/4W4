@@ -1,97 +1,93 @@
-body{
+body {
     display: flex;
     flex-direction: column;
-    font-family: "roboto", sans-serif;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
-}
-
-.global{
+  }
+  
+  .global {
     display: flex;
     justify-content: center;
-    min-height: 30vh;
-}
-
-.global>section, .global > footer{
-    // Flex : grow shrink basis;
-    flex: 0 1 900px;
-    padding: 5rem;
-}
-
-.global > .entete_menu{
-    // Flex : grow shrink basis;
-    flex: 0 1 100%;
-    padding: 5rem;
-}
-
-.global > header{
+  }
+  
+  .global>section, .global>footer {
     flex: 0 1 1100px;
     padding: 5rem;
-}
-
-header, section{
+  }
+  
+  
+  header, section {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.galerie__section{
+  }
+  
+  #menu {
     display: flex;
-    flex-direction: column;    
-}
-
-footer{
+    flex-direction: row;
+  }
+  
+  .entete_menu {
+    display: flex;
+  }
+  
+  .galerie__section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  footer {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-#entete{
+  }
+  
+  #entete {
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
-    position: relative;    
-}
-
-.entete__header{
-    display: flex;    
+    position: relative;
+  }
+  
+  .entete__header {
+    display: flex;
     flex-direction: column;
-}
-/* Styles pour le blockquote */
-blockquote {
+  }
+  
+  blockquote {
     border-left: 4px solid var(--couleur-bouton-linear-gradient-1);
     margin: 20px 0;
     padding: 15px;
     background-color: var(--couleur-dedans-blockquote);
     color: #333;
     font-style: italic;
-}
-
-/*Les grandes zones dans la page principale*/
-
-#accueil{
+  }
+  
+  #accueil {
     background-color: var(--couleur-arriere-accueil);
     color: var(--couleur-accueil);
-}
-
-.accueil__section {
+  }
+  
+  .accueil__section {
     display: flex;
     flex-direction: column;
-}
-
-#galerie{
+  }
+  
+  #galerie {
     background-color: var(--couleur-arriere-galerie);
     color: var(--couleur-galerie);
     z-index: 1;
     background: linear-gradient(180deg, var(--couleur-arriere-accueil), var(--couleur-arriere-evenement));
-}
-
-#evenement{
+  }
+  
+  #evenement {
     background-color: var(--couleur-arriere-evenement);
     color: var(--couleur-evenement);
     position: relative;
-}
-
-.evenement__section{
+  }
+  
+  .evenement__section {
     display: flex;
     flex-direction: column;
-}
+  }
+  

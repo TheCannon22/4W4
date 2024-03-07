@@ -1,60 +1,70 @@
-/*
-<div id="menu" class="global">
-    <div class="entete_menu">
-    // Générer par wp_nav_menu()
-        <div class="menu-entete-container">
-            <ul id="menu-entete" class="menu">
-                <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post current-menu-item menu-item-30"><a href="http://localhost:8080/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/" aria-current="page">Technologies émergentes en création</a></li>
-                <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost:8080/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
-                <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost:8080/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
-                <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-                <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-            </ul>
-        </div>        
-    </div>
-</div>
-*/
+/* Style for the navigation container */
+.menu-principal-container {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  z-index: 2;
 
-#menu {
-    &.global {
-      .entete_menu {
-        background-color: var(--couleur-bouton-linear-gradient-2);
-  
-        .menu-entete-container {
-          width: 100%;
-  
-          .menu {
-            display: flex;
-            justify-content: space-between;
-            list-style-type: none;
-            padding: 0;
-  
-            .menu-item {
-              margin: 0;
-              padding: 10px;
-              transition: background-color 0.3s ease;
-  
-              &:hover {
-                background-color: var(--couleur-lien-hover-menu);
-              }
-  
-              a {
-                text-decoration: none;
-                color: var(--couleur-lien-menu);
-                font-weight: bold;
-  
-                &:hover {
-                  color: var(--couleur-lien-hover);
-                }
-              }
-  
-              &.current-menu-item {
-                background-color: var(--couleur-lien-actuel-menu);
-              }
-            }
-          }
-        }
-      }
-    }
+  @media screen and (min-width: 768px) {
+    position: static;
+    transform: translateX(0); /* Change translateX value */
   }
-  
+}
+
+/* Style for the navigation menu */
+#menu-principal {
+  display: flex; /* Uncomment this line */
+  flex-direction: column;
+  list-style-type: none;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: var(--couleur-bouton-linear-gradient-2);
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+
+  flex: 0 1 100%;
+  padding: 5rem; /* Remove this line */
+  padding: 0;
+}
+
+/* Style for each navigation item (list item) */
+.menu-item {
+  color: black;
+}
+
+/* Optional: Add some styling for the links */
+.menu-item a {
+  text-decoration: none;
+  color: inherit; /* Inherit color from the parent .menu-item */
+  padding: 10px; /* Add padding to make it visually appealing */
+  display: block; /* Make the entire link area clickable */
+}
+
+/* Optional: Style for the active link */
+.menu-item a:hover {
+  background-color: lightgray;
+  border-radius: 5px;
+}
+
+#chk_burger {
+  display: none;
+}
+
+#burger {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+}
+
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translateX(-100%); /* Change translate value */
+}

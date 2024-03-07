@@ -1,25 +1,14 @@
-# Laboratoire #3 fait par Alexander Rankov
-## Création d'un site WP
-- Adaptation du thème de l'exercice 1
-- Création du modèle index.php
-- Création de la branche labo3
-- minimum 3 commits 
-- Un Readme.md qui contiendra:
-    - Le nom de l'auteur (Mon nom est Alexander Rankov)
-    - L'objectif du labo3 (L'objectif du labo3 est de créer une page WordPress)
-    - Les réalisations (J'ai crée un thème WordPress, j'ai mis la base de donnée et j'ai ajusté le site)
-    - Un lien vers la github-page
+# Laboratoire #4 fait par Alexander Rankov
+## Continuation du site WP
+## Création du menu principal
+- Ajouter un menu permettant d'accéder
+  - à vos cinq cours préférés
+  - à chacune des sections de la page
+- Le menu doit être formatter en utilisant composant/_menu.scss. Le menu doit être adaptatif et être amovible en version mobile.
 
-- Décomposé le titre de chaque cours : 
-    - Sigle du cours ex: 582-4W4
-    - Le titre du cours ex: Conception d'interface et de développement Web
-    - La durée du cours : 90h 
-- Garder les 30 premiers mots de la description du cours.
+### Création d'un header.php
 
-### La section galerie affichera la liste des cours du TIM en 3 ou 4 colonnes.
-
-- La liste devra s'adapter aux différentes largeurs de fenêtre en mobile une seule colonne.
-- Chacune des cartes de cours sera formatés en utilisant les flex box.
+- 
 
 ### Barème de correction 
 - Organisation du code, 3 commits (3 points)

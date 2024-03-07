@@ -15,6 +15,10 @@
     height: 110px;
 }
 
+.remplissage {
+    fill: var(--couleur-arriere-vague);
+}
+
 @media (min-width: 767px) {
     .vague svg{
         width: calc(126% + 1.3px);
