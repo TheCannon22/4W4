@@ -39,9 +39,9 @@
 /* Optional: Add some styling for the links */
 .menu-item a {
   text-decoration: none;
-  color: inherit; /* Inherit color from the parent .menu-item */
-  padding: 10px; /* Add padding to make it visually appealing */
-  display: block; /* Make the entire link area clickable */
+  color: inherit;
+  padding: 10px;
+  display: block;
 }
 
 /* Optional: Style for the active link */
@@ -66,5 +66,5 @@
 }
 
 #chk_burger:checked ~ .menu-principal-container {
-  transform: translateX(-100%); /* Change translate value */
+  transform: translateX(-100%);
 }
