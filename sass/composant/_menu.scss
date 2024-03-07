@@ -1,4 +1,3 @@
-/* Style for the navigation container */
 .menu-principal-container {
   position: absolute;
   top: 0;
@@ -7,13 +6,13 @@
 
   @media screen and (min-width: 768px) {
     position: static;
-    transform: translateX(0); /* Change translateX value */
+    transform: translateX(0);
   }
 }
 
-/* Style for the navigation menu */
+
 #menu-principal {
-  display: flex; /* Uncomment this line */
+  display: flex;
   flex-direction: column;
   list-style-type: none;
   justify-content: flex-start;
@@ -27,16 +26,16 @@
   }
 
   flex: 0 1 100%;
-  padding: 5rem; /* Remove this line */
+  padding: 5rem;
   padding: 0;
 }
 
-/* Style for each navigation item (list item) */
+
 .menu-item {
   color: black;
 }
 
-/* Optional: Add some styling for the links */
+
 .menu-item a {
   text-decoration: none;
   color: inherit;
@@ -44,7 +43,7 @@
   display: block;
 }
 
-/* Optional: Style for the active link */
+
 .menu-item a:hover {
   background-color: lightgray;
   border-radius: 5px;
