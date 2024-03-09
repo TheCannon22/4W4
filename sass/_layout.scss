@@ -15,8 +15,10 @@ body {
     padding: 5rem;
   }
   
-  .entete_menu{
-    z-index: 1;
+  .entete__menu, .entete__header{
+    flex : 0 1 1500px;
+    padding: 3rem 0 0 0 ;
+    position : relative;
   }
 
   header, section {
@@ -41,11 +43,6 @@ body {
     background-color: var(--couleur-arriere-entete);
     color: var(--couleur-entete);
     position: relative;
-  }
-  
-  .entete__header {
-    display: flex;
-    flex-direction: column;
   }
   
   blockquote {

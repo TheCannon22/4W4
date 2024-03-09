@@ -105,22 +105,26 @@ h6 {
 }
 
 button.entete__button {
-  font-size: clamp(1.25rem, 0.2083rem + 3.3333vw, 2.5rem);
-  background-image: linear-gradient(90deg, var(--couleur-bouton-linear-gradient-1), var(--couleur-bouton-linear-gradient-2));
-  color: #fff;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 5px;
+  background-image: linear-gradient(150deg, var(--couleur-bouton-linear-gradient-1), var(--couleur-bouton-linear-gradient-2));
+  font-size: clamp(1.5rem, 0.1458rem + 4.3333vw, 3.125rem);
+  border-radius: 10px;
+  border: 2ps solid #555;
+  padding: 16px 24px;
+  margin: 20px;
+  transition: transform 0.1s;
+  transform: translateY(0);
+  font-weight: 600;
+  text-align: center;
   cursor: pointer;
-  transition: transform 0.3s ease;
-  transform: scale(1);
 }
 button.entete__button:hover {
-  background-image: linear-gradient(90deg, var(--couleur-bouton-linear-gradient-2), var(--couleur-bouton-linear-gradient-1));
-  transform: scale(1.2);
+  background-image: linear-gradient(150deg, var(--couleur-bouton-linear-gradient-2), var(--couleur-bouton-linear-gradient-1));
+  box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+  transform: translateY(-6px);
 }
 button.entete__button:active {
-  background-image: black;
+  transform: translateY(0);
+  background-color: white;
 }
 
 a {
@@ -155,19 +159,16 @@ body {
   padding: 5rem;
 }
 
+.entete__menu, .entete__header {
+  flex: 0 1 1500px;
+  padding: 3rem 0 0 0;
+  position: relative;
+}
+
 header, section {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-#menu {
-  display: flex;
-  flex-direction: row;
-}
-
-.entete_menu {
-  display: flex;
 }
 
 .galerie__section {
@@ -186,11 +187,6 @@ footer {
   background-color: var(--couleur-arriere-entete);
   color: var(--couleur-entete);
   position: relative;
-}
-
-.entete__header {
-  display: flex;
-  flex-direction: column;
 }
 
 blockquote {
@@ -234,18 +230,41 @@ blockquote {
 /* Sections de la page                                               */
 /* ///////////////////////////////////////////////////////////////// */
 .entete__header {
-  background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.entete__header__texte {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  background-image: url("../images/unity-logo-988A22E703-seeklogo.com.png");
   background-repeat: no-repeat;
-  background-position: 100% 50%;
+  background-position: 50% 90%;
+  background-size: content;
+  text-align: center;
+  gap: 2rem;
 }
 
-.entete__header span {
-  display: block;
+.entete__header__button {
+  text-align: center;
+  padding-bottom: 10rem;
+  width: 100%;
 }
 
-@media screen and (max-width: 1000px) {
-  .entete__header {
-    background-position: center center;
+@media screen and (min-width: 1100px) {
+  .entete__header__texte {
+    background-position: 100% 90%;
+    align-items: flex-start;
+  }
+  .entete__header__button {
+    text-align: left;
   }
 }
 #footer {
@@ -413,14 +432,13 @@ ul li {
 }
 
 .carte {
-  padding: 1.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 1 25%;
+  flex: 1 0 252.5px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
-  border-radius: 20px;
 }
 
 .carte * {
@@ -428,44 +446,40 @@ ul li {
 }
 
 /*
-
 <nav class="menu-principal-container">
-<ul id="menu-principal" class="menu">
-  <li id="menu-item-30" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-30"><a href="http://localhost:8080/4w4/2020/10/07/582-5mbtechnologies-emergentes-et-avancees-volet-creation-60h/">Technologies émergentes en création</a></li>
-  <li id="menu-item-31" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-31"><a href="http://localhost:8080/4w4/2020/10/07/582-5w5-projet-web-en-equipe-105h/">Projet Web en équipe</a></li>
-  <li id="menu-item-32" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-32"><a href="http://localhost:8080/4w4/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
-  <li id="menu-item-33" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-33"><a href="http://localhost:8080/4w4/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-  <li id="menu-item-34" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-34"><a href="http://localhost:8080/4w4/2020/10/07/582-4mb-animation-3d-75h/">Animation 3D</a></li>
-  <li id="menu-item-36" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-36"><a href="#accueil">Accueil</a></li>
-  <li id="menu-item-37" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-37"><a href="#galerie">Galerie</a></li>
-  <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-38"><a href="#evenement">Événement</a></li>
-</ul></nav>        
+  <ul id="menu-principal" class="menu"><li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
+  <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
+  <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-38"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation en jeu</a></li>
+  <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/description-du-cours-582-1m1-creation-video/">Création vidéo</a></li>
+  <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="#accueil">Accueil</a></li>
+  <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#galerie">Galerie</a></li>
+  <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#evenement">Événement</a></li>
+</ul>
+</nav>
 */
-/* Style for the navigation container */
 .menu-principal-container {
+  border: 1px solid #aaa;
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50px;
+  z-index: 2;
+  transform: translateX(-200%);
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   .menu-principal-container {
     position: static;
+    transform: translateX(0);
   }
 }
 
-/* Style for the navigation menu */
 #menu-principal {
   display: flex;
   flex-direction: column;
   list-style-type: none;
   justify-content: flex-start;
-  align-items: center;
-  background-color: blue;
-  flex: 0 1 100%;
-  padding: 5rem;
-  padding: 0;
+  align-items: flex-start;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 700px) {
   #menu-principal {
     flex-direction: row;
     justify-content: space-around;
@@ -473,21 +487,22 @@ ul li {
   }
 }
 
-/* Style for each navigation item (list item) */
-.menu-item {
-  color: black;
+#chk_burger {
+  display: none;
 }
 
-/* Optional: Add some styling for the links */
-.menu-item a {
-  text-decoration: none;
-  color: inherit; /* Inherit color from the parent .menu-item */
-  padding: 10px; /* Add padding to make it visually appealing */
-  display: block; /* Make the entire link area clickable */
+#burger {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+@media screen and (min-width: 700px) {
+  #burger {
+    display: none;
+  }
 }
 
-/* Optional: Style for the active link */
-.menu-item a:hover {
-  background-color: lightgray;
-  border-radius: 5px;
+#chk_burger:checked ~ .menu-principal-container {
+  transform: translateX(0);
 }/*# sourceMappingURL=style.css.map */

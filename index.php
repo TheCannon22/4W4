@@ -1,57 +1,58 @@
 <?php 
-
-    /**
-     * Modèle de base index.php
-     */
-
+/**
+ *  Modèle de base index.php 
+ */
 ?>
 
 <?php get_header(); ?>
-    <div id="entete" class="global">
-        <section class="entete__header">
-            <h1 class="bgc-text">Thème d'Alexander</h1>
-            <h2 class="bgc-text">4W4 - Conception d'interface <span>et développement web</span></h2>
-            <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
-            <button class="entete__button">Évenements</button>
+
+<div id="entete" class="global">
+        <section class="entete__header">  
+                        <!-- facebook -->
+
+            <div class="entete__header__texte">    
+                <h1 class="bgc-text">Thème du groupe #2</h1>
+                <h2 class="bgc-text">4W4 - Conception d'interface <br> et développement Web</h2>
+                <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
+            </div>   
+            <div class="entete__header__button"><button class="entete__button">Événements</button></div>
         </section>
-        <?php get_template_part("gabarit/vague")?>
+<?php get_template_part("gabarit/vague"); ?>
     </div>
     <div id="accueil" class="global">
         <section class="accueil__section">
-            <h2>Accueil</h2>
-            <div class="section__cours">
-                <!--
-                if(have_posts())
-                {
-                    while(have_posts()){
-                        the_post();
-                        the_title('<p>', '</p>');
-                        $contenu = get_the_content();
-                        $contenu = wp_trim_words($contenu, 10);
-                        echo $contenu;
-                    }
-                }
-                -->                
-            <?php if(have_posts()):
-                    while(have_posts()): the_post();
-                    $titre = get_the_title();
-                    $sigle = substr($titre,0,7);
-                    $pos_parenthese = strpos($titre, '(');
-                    $dureeCours = substr($titre, $pos_parenthese + 1, -1);
-                    $titreCours = substr($titre, 7, $pos_parenthese - 7);
-                    // strpos()
-
-                    ?>
-
-                    <div class="carte">
-                        <h5><?php echo $sigle; ?></h5>
-                        <h4><?php echo $titreCours; ?> </h4>
-                        <p><?php echo wp_trim_words(get_the_content(), 10); ?> </p>
-                        <h5>Durée : <?php echo $dureeCours; ?> </h5>
-                    </div>
-                    <?php endwhile; ?>
-                    <?php endif; ?>            
-            </div>
+            <h2>Accueil (h2)</h2>
+        <div class="section__cours">  
+ <?php
+  /*
+        if (have_posts()){
+            while(have_posts()){
+                the_post();
+                the_title('<p>','</p>');
+                $contenu = get_the_content();
+                $contenu = wp_trim_words($contenu, 10);
+                echo $contenu;
+            }
+        }
+  */
+  ?>      
+  <?php if (have_posts()):
+        while(have_posts()): the_post(); 
+        $titre = get_the_title();
+        $sigle = substr($titre, 0, 7);
+        $pos_parenthese = strpos($titre, '(');
+        $duree = substr($titre,$pos_parenthese+1, -1);
+        $titre = substr($titre, 7, $pos_parenthese-7);
+        ?>
+        <div class="carte">
+            <h5><?php echo $sigle; ?></h5> 
+            <h4><?php echo $titre; ?></h4>
+            <p><?php echo wp_trim_words(get_the_content(),10); ?></p>
+            <h5>Durée: <?php echo $duree; ?></h5>
+        </div>
+       <?php endwhile; ?>
+    <?php endif; ?>
+  </div>
             <img src="./images/Logo_Chelsea.png" alt="Image d'accueil">
         </section>
     </div>
