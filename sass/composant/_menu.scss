@@ -13,20 +13,19 @@
 .menu-principal-container {
   display: flex;
   justify-content: center;
-  border: 1px solid #aaa;
   position: absolute;
   top: 0;
-  left: center;
   z-index: 2;
   width: 400px;
   height: 400px;
-  background-color: lightblue;
+  background-color: var(--couleur-bouton-linear-gradient-2);
   transform: translateX(-200%);
-  transition: transform 0.3s ease; /* Add transition property for smooth animation */
-
+  transition: transform 0.3s ease; 
   @media screen and (min-width: 700px) {
     position: static;
     width: 100%;
+    height: auto;
+    transform: translateX(0%);
   }
 }
 
@@ -39,15 +38,19 @@
 
   @media screen and (min-width: 700px) {
     flex-direction: row;
-    justify-content: space-around;
     flex-wrap: wrap;
+    justify-content: space-evenly;
   }
 }
 
-.menu-item {}
+#menu-principal li {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+}
 
 .menu-item a {
-  color: blue;
+  color: var(--couleur-lien);
 }
 
 #chk_burger {
