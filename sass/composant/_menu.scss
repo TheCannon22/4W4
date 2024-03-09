@@ -16,7 +16,7 @@
   top:0;
   left:50px;
   z-index: 2;
-  transform : translateX(-200%);
+  // transform : translateX(-200%);
   @media screen and (min-width:700px) {
     position: static;
     transform : translateX(0);
@@ -54,6 +54,7 @@ display: block;
 position: absolute;
 top:0;
 left:0;
+z-index: 2;
 @media screen and (min-width:700px) {
   display : none;
 }

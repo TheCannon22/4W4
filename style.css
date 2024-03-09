@@ -452,7 +452,6 @@ ul li {
   top: 0;
   left: 50px;
   z-index: 2;
-  transform: translateX(-200%);
 }
 @media screen and (min-width: 700px) {
   .menu-principal-container {
@@ -485,6 +484,7 @@ ul li {
   position: absolute;
   top: 0;
   left: 0;
+  z-index: 2;
 }
 @media screen and (min-width: 700px) {
   #burger {
