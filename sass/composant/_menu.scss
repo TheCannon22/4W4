@@ -10,57 +10,62 @@
 </ul>
 </nav>
 */
-.menu-principal-container { //nav
-  border :  1px solid #aaa;
+.menu-principal-container {
+  display: flex;
+  justify-content: center;
+  border: 1px solid #aaa;
   position: absolute;
-  top:0;
-  left:50px;
+  top: 0;
+  left: center;
   z-index: 2;
-  // transform : translateX(-200%);
-  @media screen and (min-width:700px) {
+  width: 400px;
+  height: 400px;
+  background-color: lightblue;
+  transform: translateX(-200%);
+  transition: transform 0.3s ease; /* Add transition property for smooth animation */
+
+  @media screen and (min-width: 700px) {
     position: static;
-    transform : translateX(0);
-}
-}
-
-#menu-principal{ // ul
-display : flex;
-flex-direction: column;
-list-style-type: none;
-justify-content: flex-start;
-align-items: flex-start;
-@media screen and (min-width:700px) {
-flex-direction: row;
-justify-content: space-around;
-flex-wrap: wrap;
+    width: 100%;
+  }
 }
 
+#menu-principal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  list-style-type: none;
+
+  @media screen and (min-width: 700px) {
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
 }
-.menu-item{ //li
 
+.menu-item {}
+
+.menu-item a {
+  color: blue;
 }
 
-.menu-item a{ //li a
-
-}
-
-
-#chk_burger{
-display: none;
+#chk_burger {
+  display: none;
 }
 
 #burger {
-display: block;
-position: absolute;
-top:0;
-left:0;
-z-index: 2;
-@media screen and (min-width:700px) {
-  display : none;
-}
-}  
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
 
+  @media screen and (min-width: 700px) {
+    display: none;
+  }
+}
 
 #chk_burger:checked ~ .menu-principal-container {
-transform : translateX(0);
+  transform: translateX(0);
 }
