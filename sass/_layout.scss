@@ -1,13 +1,14 @@
 body {
     display: flex;
     flex-direction: column;
-    font-family: "Roboto", sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     box-sizing: border-box;
   }
   
   .global {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
   
   .global>section, .global>footer {
@@ -15,13 +16,13 @@ body {
     padding: 5rem;
   }
   
-  .entete__menu, .entete__header{
+  .entete__menu{
     flex : 0 1 1500px;
-    padding: 3rem 0 0 0 ;
+    // padding: 3rem 0 0 0 ;
     position : relative;
   }
 
-  header, section {
+  header{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -62,6 +63,12 @@ body {
   .accueil__section {
     display: flex;
     flex-direction: column;
+    align-items: center;
+  }
+
+  .accueil__section img{
+    margin-top: 20px;
+    width: 300px;
   }
   
   #galerie {
@@ -80,5 +87,6 @@ body {
   .evenement__section {
     display: flex;
     flex-direction: column;
+    align-items: center;
   }
   
