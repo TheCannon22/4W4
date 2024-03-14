@@ -5,39 +5,16 @@
 ?>
 
 <?php get_header(); ?>
-<h2>Front-page.php</h2>
+<h2>Category.php</h2>
 
 <!-- <h1>Front-page.php</h1> -->
 
-<div id="entete" class="global">
-        <section class="entete__header">  
-                        <!-- facebook -->
-
-            <div class="entete__header__texte">    
-                <h1 class="bgc-text"><?php echo get_bloginfo('name');?></h1>
-                <h2 class="bgc-text"><?php echo get_bloginfo('description');?></h2>
-                <h3 class="bgc-text">TIM - Collège de Maisonneuve</h3>
-            </div>   
-            <div class="entete__header__button"><button class="entete__button">Événements</button></div>
-        </section>
-<?php get_template_part("gabarit/vague"); ?>
-    </div>
     <div id="accueil" class="global">
         <section class="accueil__section">
             <h2>Accueil (h2)</h2>
         <div class="section__cours">  
  <?php
-  /*
-        if (have_posts()){
-            while(have_posts()){
-                the_post();
-                the_title('<p>','</p>');
-                $contenu = get_the_content();
-                $contenu = wp_trim_words($contenu, 10);
-                echo $contenu;
-            }
-        }
-  */
+ 
   ?>      
   <?php if (have_posts()):
         while(have_posts()): the_post();?>

@@ -414,12 +414,6 @@ footer ul li {
   fill: var(--couleur-reseaux-sociaux);
 }
 
-.section__cours {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-}
-
 .carte {
   padding: 1rem;
   display: flex;
