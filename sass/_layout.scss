@@ -5,7 +5,7 @@ body {
     box-sizing: border-box;
   }
   
-  .global {
+  .global > a{
     display: flex;
     justify-content: center;
     align-items: center;

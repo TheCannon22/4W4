@@ -154,7 +154,7 @@ body {
   box-sizing: border-box;
 }
 
-.global {
+.global > a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,7 +294,7 @@ blockquote {
   text-align: center;
 }
 
-ul {
+.footer__column > ul {
   list-style: none;
   padding: 0;
 }
@@ -414,6 +414,12 @@ footer ul li {
   fill: var(--couleur-reseaux-sociaux);
 }
 
+.section__voyage {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
 .carte {
   padding: 1rem;
   display: flex;
@@ -441,6 +447,7 @@ footer ul li {
 </nav>
 */
 .menu-principal-container {
+  border: 2px solid red;
   display: flex;
   justify-content: center;
   position: absolute;
@@ -462,17 +469,17 @@ footer ul li {
 }
 
 #menu-principal {
+  border: 2px solid black;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
-  list-style-type: none;
+  width: 100%;
 }
 @media screen and (min-width: 700px) {
   #menu-principal {
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
   }
 }
 
