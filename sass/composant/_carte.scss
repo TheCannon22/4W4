@@ -5,12 +5,12 @@
 }
 
 .carte {
-    padding : 1rem;
+    padding : 2rem;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex : 1 0 calc(1010px/4);
+    flex : 1 0 calc(1000px/4);
     background-color: hsl(var(--hu1),var(--s-couleur-arriere),  75%);
 }
 

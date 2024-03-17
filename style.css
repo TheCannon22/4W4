@@ -113,22 +113,21 @@ button.entete__button {
   background-image: linear-gradient(150deg, var(--couleur-bouton-linear-gradient-1), var(--couleur-bouton-linear-gradient-2));
   font-size: clamp(1.5rem, 0.1458rem + 4.3333vw, 3.125rem);
   border-radius: 10px;
-  border: 2ps solid #555;
   padding: 16px 24px;
   margin: 20px;
-  transition: transform 0.1s;
-  transform: translateY(0);
-  font-weight: 600;
+  transition: transform 0.3s;
+  transform: scale(1);
+  font-weight: bold;
   text-align: center;
   cursor: pointer;
 }
 button.entete__button:hover {
   background-image: linear-gradient(150deg, var(--couleur-bouton-linear-gradient-2), var(--couleur-bouton-linear-gradient-1));
   box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
-  transform: translateY(-6px);
+  transform: scale(1.2);
 }
 button.entete__button:active {
-  transform: translateY(0);
+  transform: scale(1);
   background-color: white;
 }
 
@@ -362,8 +361,8 @@ footer ul li {
 
 /* Styles pour le bouton de recherche */
 .recherche__button {
-  background-color: rgb(78, 205, 255);
-  color: #fff;
+  background-color: var(--couleur-bouton-linear-gradient-1);
+  color: var(--couleur-lien);
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -373,8 +372,7 @@ footer ul li {
 
 /* Ajout de styles au survol du bouton */
 .recherche__button:hover {
-  background-color: #fff;
-  color: #31572c;
+  background-color: var(--couleur-lien);
 }
 
 /* Ajout d'une animation au survol */
@@ -397,7 +395,7 @@ footer ul li {
 .sociaux {
   display: flex;
   justify-content: center;
-  gap: 2rem;
+  gap: 2.5rem;
 }
 
 .sociaux svg {
@@ -411,12 +409,12 @@ footer ul li {
 }
 
 .carte {
-  padding: 1rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 0 252.5px;
+  flex: 1 0 250px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
 }
 
@@ -424,27 +422,14 @@ footer ul li {
   text-align: center;
 }
 
-/*
-<nav class="menu-principal-container">
-  <ul id="menu-principal" class="menu"><li id="menu-item-36" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-36"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/350-5n1-communication-et-dynamique-dune-equipe-de-travail-45h/">Communication</a></li>
-  <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-37"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/393-5e1-methodes-de-recherche-et-preparation-au-marche-du-travail-45h/">Méthodes de recherche</a></li>
-  <li id="menu-item-38" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-38"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/582-1j1-animation-et-interactivite-en-jeu-75h/">Animation en jeu</a></li>
-  <li id="menu-item-39" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-39"><a href="http://localhost:81/4w4-2024-gr2/2020/10/07/description-du-cours-582-1m1-creation-video/">Création vidéo</a></li>
-  <li id="menu-item-42" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-42"><a href="#accueil">Accueil</a></li>
-  <li id="menu-item-43" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-43"><a href="#galerie">Galerie</a></li>
-  <li id="menu-item-44" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-44"><a href="#evenement">Événement</a></li>
-</ul>
-</nav>
-*/
 .menu-principal-container {
   border: 2px solid red;
   display: flex;
-  justify-content: center;
   position: absolute;
   top: 0;
   z-index: 2;
-  width: 400px;
-  height: 400px;
+  width: 80%;
+  height: 100%;
   background-color: var(--couleur-bouton-linear-gradient-2);
   transform: translateX(-200%);
   transition: transform 0.3s ease;
@@ -462,21 +447,19 @@ footer ul li {
   border: 2px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   width: 100%;
 }
 @media screen and (min-width: 700px) {
   #menu-principal {
     flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
   }
 }
 
 #menu-principal li {
   display: flex;
   flex: 1;
-  justify-content: space-between;
 }
 
 .menu-item a {
@@ -492,7 +475,7 @@ footer ul li {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  z-index: 3;
 }
 @media screen and (min-width: 700px) {
   #burger {

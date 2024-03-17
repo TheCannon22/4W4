@@ -9,8 +9,8 @@
 
 /* Styles pour le bouton de recherche */
 .recherche__button {
-    background-color: rgb(78, 205, 255);
-    color: #fff;
+    background-color: var(--couleur-bouton-linear-gradient-1);
+    color: var(--couleur-lien);
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
@@ -20,8 +20,7 @@
 
 /* Ajout de styles au survol du bouton */
 .recherche__button:hover {
-    background-color: #fff;
-    color: #31572c;
+    background-color: var(--couleur-lien);
 }
 
 /* Ajout d'une animation au survol */
