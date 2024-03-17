@@ -7,6 +7,7 @@
 - Alexander Rankov
 
 ## Groupe
+- Je suis dans le groupe #2
 
 ## Description du projet:
 

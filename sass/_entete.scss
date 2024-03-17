@@ -3,25 +3,26 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-
-
-.entete__header__texte{
-
-    display : flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    
     background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
     background-repeat: no-repeat;
     background-position: 100% 50%;
     background-size:content;
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.entete__header__texte{
     text-align: center;
-    gap: 2rem;
 }
 
 @media screen and (min-width:1100px){
-    .entete__header__texte{
+    .entete__header{
         background-position: center center;
     }    
 }

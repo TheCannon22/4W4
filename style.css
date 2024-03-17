@@ -165,35 +165,6 @@ body {
   padding: 5rem;
 }
 
-.entete__menu {
-  flex: 0 1 100%;
-  position: relative;
-}
-
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.galerie__section {
-  display: flex;
-  flex-direction: column;
-}
-
-footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-#entete {
-  background-color: var(--couleur-arriere-entete);
-  color: var(--couleur-entete);
-  position: relative;
-}
-
 blockquote {
   border-left: 4px solid var(--couleur-bouton-linear-gradient-1);
   margin: 20px 0;
@@ -201,6 +172,12 @@ blockquote {
   background-color: var(--couleur-dedans-blockquote);
   color: #333;
   font-style: italic;
+}
+
+#entete {
+  background-color: var(--couleur-arriere-entete);
+  color: var(--couleur-entete);
+  position: relative;
 }
 
 #accueil {
@@ -226,6 +203,11 @@ blockquote {
   background: linear-gradient(180deg, var(--couleur-arriere-accueil), var(--couleur-arriere-evenement));
 }
 
+.galerie__section {
+  display: flex;
+  flex-direction: column;
+}
+
 #evenement {
   background-color: var(--couleur-arriere-evenement);
   color: var(--couleur-evenement);
@@ -246,23 +228,24 @@ blockquote {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-.entete__header__texte {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   background-image: url("images/unity-logo-988A22E703-seeklogo.com.png");
   background-repeat: no-repeat;
   background-position: 100% 50%;
   background-size: content;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.entete__header__texte {
   text-align: center;
-  gap: 2rem;
 }
 
 @media screen and (min-width: 1100px) {
-  .entete__header__texte {
+  .entete__header {
     background-position: center center;
   }
 }
@@ -270,6 +253,13 @@ blockquote {
   background-color: var(--couleur-arriere-footer);
   color: var(--couleur-footer);
   padding: 20px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .footer__section {
