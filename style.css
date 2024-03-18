@@ -422,6 +422,11 @@ footer ul li {
   text-align: center;
 }
 
+.carte .post-categories {
+  list-style-type: none;
+  display: flex;
+}
+
 .menu-principal-container {
   border: 2px solid red;
   display: flex;
