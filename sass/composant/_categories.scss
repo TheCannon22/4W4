@@ -1,0 +1,18 @@
+.categories {
+    padding : 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex : 1 0 calc(1000px/4);
+    background-color: hsl(var(--hu1),var(--s-couleur-arriere),  75%);
+}
+
+.categories *{
+    text-align: center;
+}
+
+.categories .post-categories{
+    list-style-type: none;
+    display: flex;
+}

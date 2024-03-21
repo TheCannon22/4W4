@@ -428,7 +428,6 @@ footer ul li {
 }
 
 .menu-principal-container {
-  border: 2px solid red;
   display: flex;
   position: absolute;
   top: 0;
@@ -449,7 +448,6 @@ footer ul li {
 }
 
 #menu-principal {
-  border: 2px solid black;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -490,4 +488,23 @@ footer ul li {
 
 #chk_burger:checked ~ .menu-principal-container {
   transform: translateX(0);
+}
+
+.categories {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 250px;
+  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+}
+
+.categories * {
+  text-align: center;
+}
+
+.categories .post-categories {
+  list-style-type: none;
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

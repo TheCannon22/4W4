@@ -18,33 +18,13 @@
         </div>
         <div class="entete__header__button"><button class="entete__button">Événements</button></div>
     </section>
-    <?php get_template_part("gabarit/vague"); ?>
 </div>
 <div id="accueil" class="global">
     <section class="accueil__section">
         <h2>Accueil (h2)</h2>
         <div class="section__voyage">
-
-        
             <?php
-            /*
-                if (have_posts()){
-                    while(have_posts()){
-                        the_post();
-                        the_title('<p>','</p>');
-                        $contenu = get_the_content();
-                        $contenu = wp_trim_words($contenu, 10);
-                        echo $contenu;
-                    }
-                }
-            */
-
-            /* 
-                get_the_title(); //Retourne une chaîne qui contient le titre
-                the_title(); //echo du titre
-            */
-            ?>
-            <?php if (have_posts()) :
+            if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
                     <div class="carte">
                         <h4><?php the_title(); ?></h4>
@@ -52,8 +32,29 @@
                         <p> <a href="<?php echo get_permalink(); ?>"> Voir la suite </a></p>
                         <?php the_category(); ?>
                     </div>
-                <?php endwhile; ?>
-            <?php endif; ?>
+                <?php endwhile;
+            endif;
+
+            // Récupérer les catégories
+            $categories = get_categories();
+
+            // Parcourir chaque catégorie
+            foreach ($categories as $category) {
+                // Récupérer les 10 premiers mots de la description de la catégorie
+                $category_description = wp_trim_words($category->description, 10);
+                // Récupérer le lien vers la liste des destinations de cette catégorie
+                $category_link = get_category_link($category->term_id);
+                // Récupérer le nombre d'articles pour cette catégorie
+                $category_count = $category->count;
+                ?>
+                <div class="categories">
+                    <h4><?php echo $category->name; ?></h4>
+                    <p><?php echo $category_description; ?></p>
+                    <p><a href="<?php echo $category_link; ?>">Voir les destinations</a></p>
+                    <p><?php echo $category_count; ?> articles</p>
+                </div>
+            <?php } ?>
+
         </div>
         <img src="./images/Logo_Chelsea.png" alt="Image d'accueil">
     </section>
@@ -82,7 +83,6 @@
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
     </section>
-    <?php get_template_part("gabarit/vague") ?>
 </div>
 
 <?php get_footer(); ?>

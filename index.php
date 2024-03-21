@@ -18,7 +18,6 @@
         </div>
         <div class="entete__header__button"><button class="entete__button">Événements</button></div>
     </section>
-    <?php get_template_part("gabarit/vague"); ?>
 </div>
 <div id="accueil" class="global">
     <section class="accueil__section">
@@ -81,7 +80,6 @@
             Votre navigateur ne supporte pas la balise vidéo.
         </video>
     </section>
-    <?php get_template_part("gabarit/vague") ?>
 </div>
 <div id="footer" class="global">
     <footer class="footer__section">
