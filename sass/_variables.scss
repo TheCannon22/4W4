@@ -1,25 +1,85 @@
-// $--clr-bleu-pale    : hsl(220, 100%, 85%);
-// $--clr-bleu-leger  : hsl(220, 100%, 60%);
-// $--clr-bleu-moyen  : hsl(220, 100%, 30%);    
-// $--clr-bleu-fonce  : hsl(220, 100%, 15%);
+@use "sass:list";
+
+// Définition des variables de couleurs pour la palette de couleurs
+
+$--clr-bleu-pale : hsl(220, 100%, 85%);
+$--clr-bleu-leger : hsl(220, 100%, 60%);
+$--clr-bleu-moyen : hsl(220, 100%, 30%);
+$--clr-bleu-fonce : hsl(220, 100%, 15%);
 
 
-// $--clr-orange-pale: hsl(40, 100%, 85%);
-// $--clr-orange-leger  : hsl(40, 100%, 50%);
-// $--clr-orange-moyen  : hsl(40, 100%, 30%);
-// $--clr-orange-fonce  : hsl(40, 100%, 15%);
+$--clr-orange-pale: hsl(40, 100%, 85%);
+$--clr-orange-leger : hsl(40, 100%, 50%);
+$--clr-orange-moyen : hsl(40, 100%, 30%);
+$--clr-orange-fonce : hsl(40, 100%, 15%);
 
-// $--clr-rouge-pale: hsl(10, 100%, 85%);
-// $--clr-rouge-leger  : hsl(10, 100%, 50%);
-// $--clr-rouge-moyen  : hsl(10, 100%, 30%);
-// $--clr-rouge-fonce  : hsl(10, 100%, 15%);
+$--clr-rouge-pale: hsl(10, 100%, 85%);
+$--clr-rouge-leger : hsl(10, 100%, 50%);
+$--clr-rouge-moyen : hsl(10, 100%, 30%);
+$--clr-rouge-fonce : hsl(10, 100%, 15%);
 
-// $--clr-vert-pale: hsl(70, 100%, 85%);
-// $--clr-vert-leger  : hsl(70, 100%, 50%);
-// $--clr-vert-moyen  : hsl(70, 100%, 30%);
-// $--clr-vert-fonce  : hsl(70, 100%, 15%);
+$--clr-vert-pale: hsl(70, 100%, 85%);
+$--clr-vert-leger : hsl(70, 100%, 50%);
+$--clr-vert-moyen : hsl(70, 100%, 30%);
+$--clr-vert-fonce : hsl(70, 100%, 15%);
 
-:root{
+// Création du mapping des couleurs
+$defaut: (
+    primaire : (100: $--clr-bleu-pale,
+        200: $--clr-bleu-leger,
+        300: $--clr-bleu-moyen,
+        400: $--clr-bleu-fonce ),
+    secondaire : (100: $--clr-orange-pale,
+        200: $--clr-orange-leger,
+        300: $--clr-orange-moyen,
+        400: $--clr-orange-fonce ),
+    ternaire : (100: $--clr-rouge-pale,
+        200: $--clr-rouge-leger,
+        300: $--clr-rouge-moyen,
+        400: $--clr-rouge-fonce ),
+    vert : (100: $--clr-vert-pale,
+        200: $--clr-vert-leger,
+        300: $--clr-vert-moyen,
+        400: $--clr-vert-fonce )
+);
+
+@each $nom, $couleurs in $defaut {
+    @each $valeur, $couleur in $couleurs {
+        .clr-#{$nom}-#{$valeur} {
+            color : #{$couleur};
+
+        }
+
+        .bck-#{$nom}-#{$valeur} {
+
+            background-color: #{$couleur};
+        }
+    }
+}
+
+$agencement-couleur :(
+    primaire: ($--clr-bleu-pale, ($--clr-bleu-fonce, $--clr-bleu-leger)),
+    secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
+    ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
+    vert: ($--clr-vert-fonce, $--clr-vert-pale)
+);
+
+@mixin couleur-agencement($clr,$bck){
+    color: $clr;
+    @if(list.length($bck)==1){
+        background-color: $bck;
+    }   @else {
+        background-image: linear-gradient(90deg, $bck);
+    }   
+}
+
+@each $valeur, $clr in $agencement-couleur {
+    .clr-agencement-#{$valeur} {
+        @include couleur-agencement($clr...);
+    }
+} 
+
+:root {
 
     /*https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties*/
     /*
@@ -31,24 +91,24 @@
     */
 
 
-    --nb-element : 5;
-    --increment-angle : calc(360/var(--nb-element));
+    --nb-element: 5;
+    --increment-angle: calc(360/var(--nb-element));
     // 360 / 5 = 72
     --angle-initial: 174;
-    --hu1 : var(--angle-initial);
-    --hu2 : calc(var(--hu1) + var(--increment-angle));
-    --hu3 : calc(var(--hu2) + var(--increment-angle));
-    --hu4 :  calc(var(--hu3) + var(--increment-angle));
-    --hu5 :  calc(var(--hu4) + var(--increment-angle));
+    --hu1: var(--angle-initial);
+    --hu2: calc(var(--hu1) + var(--increment-angle));
+    --hu3: calc(var(--hu2) + var(--increment-angle));
+    --hu4: calc(var(--hu3) + var(--increment-angle));
+    --hu5: calc(var(--hu4) + var(--increment-angle));
 
     /*Couleur arrière-plan*/
 
-    --s-couleur-arriere : 100%; //Saturation  
-    --l-couleur-arriere : 50%; //Luminosité
+    --s-couleur-arriere: 100%; //Saturation  
+    --l-couleur-arriere: 50%; //Luminosité
 
     /* Couleur avant-plan */
-    --s-couleur : 100%; //Saturation
-    --l-couleur : 80%; //Luminosité
+    --s-couleur: 100%; //Saturation
+    --l-couleur: 80%; //Luminosité
 
     /*
     --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), var(--l-couleur-arriere));
@@ -67,34 +127,34 @@
     // Couleur complémentaire
     --hu2: calc(var(--hu1) + 10);
     --hu3: calc(var(--hu2) + 10);
-    --hu4 : calc(var(--hu3) + 10);
-    --hu5 : calc(var(--hu4) + 10);
+    --hu4: calc(var(--hu3) + 10);
+    --hu5: calc(var(--hu4) + 10);
 
     --couleur-arriere-entete: hsl(var(--hu1), var(--s-couleur-arriere), 60%);
     --couleur-arriere-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 65%);
     --couleur-arriere-evenement: hsl(var(--hu2), var(--s-couleur-arriere), 70%);
-    --couleur-arriere-galerie : hsl(var(--hu4), var(--s-couleur-arriere), 75%);
-    --couleur-arriere-footer: hsl(var(--hu1),var(--s-couleur-arriere), 80%);
+    --couleur-arriere-galerie: hsl(var(--hu4), var(--s-couleur-arriere), 75%);
+    --couleur-arriere-footer: hsl(var(--hu1), var(--s-couleur-arriere), 80%);
 
     --couleur-entete: hsl(var(--hu1), var(--s-couleur-arriere), 20%);
     --couleur-accueil: hsl(var(--hu2), var(--s-couleur-arriere), 25%);
     --couleur-evenement: hsl(var(--hu3), var(--s-couleur-arriere), 30%);
-    --couleur-galerie : hsl(var(--hu4), var(--s-couleur-arriere), 35%);
-    --couleur-footer: hsl(var(--hu5),var(--s-couleur-arriere), 40%);
+    --couleur-galerie: hsl(var(--hu4), var(--s-couleur-arriere), 35%);
+    --couleur-footer: hsl(var(--hu5), var(--s-couleur-arriere), 40%);
 
     --couleur-lien: #fff;
     --couleur-lien-hover: #333;
     --couleur-lien-visited: #a600ff;
 
-    --couleur-lien-menu : #fff;
+    --couleur-lien-menu: #fff;
     --couleur-lien-hover-menu: black;
     --couleur-lien-actuel-menu: grey;
 
-    --couleur-bouton-linear-gradient-1: #31c5ff ;
-    --couleur-bouton-linear-gradient-2: rgb(41, 141, 255); 
-    --couleur-dedans-blockquote:#f5f5f5;
+    --couleur-bouton-linear-gradient-1: #31c5ff;
+    --couleur-bouton-linear-gradient-2: rgb(41, 141, 255);
+    --couleur-dedans-blockquote: #f5f5f5;
 
-    --couleur-reseaux-sociaux : white;
+    --couleur-reseaux-sociaux: white;
 
     --couleur-arriere-vague: (var(--hu2), var(--s-couleur-arriere), 65%);
 
