@@ -12,10 +12,10 @@
     align-items: center;
     flex: 1 0 calc(1000px / 4);
     background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
-    border-radius: 15px; /* Bordures arrondies légèrement plus prononcées */
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition sur la transformation et l'ombre */
-    overflow: hidden; /* Pour cacher les coins arrondis des enfants */
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
 .carte:hover {
