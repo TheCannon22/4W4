@@ -1,5 +1,3 @@
-@use "sass:list";
-
 // Définition des variables de couleurs pour la palette de couleurs
 
 $--clr-bleu-pale : hsl(220, 100%, 85%);
@@ -43,41 +41,12 @@ $defaut: (
         400: $--clr-vert-fonce )
 );
 
-@each $nom, $couleurs in $defaut {
-    @each $valeur, $couleur in $couleurs {
-        .clr-#{$nom}-#{$valeur} {
-            color : #{$couleur};
-
-        }
-
-        .bck-#{$nom}-#{$valeur} {
-
-            background-color: #{$couleur};
-        }
-    }
-}
-
 $agencement-couleur :(
     primaire: ($--clr-bleu-pale, ($--clr-bleu-fonce, $--clr-bleu-leger)),
     secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
     ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
     vert: ($--clr-vert-fonce, $--clr-vert-pale)
 );
-
-@mixin couleur-agencement($clr,$bck){
-    color: $clr;
-    @if(list.length($bck)==1){
-        background-color: $bck;
-    }   @else {
-        background-image: linear-gradient(90deg, $bck);
-    }   
-}
-
-@each $valeur, $clr in $agencement-couleur {
-    .clr-agencement-#{$valeur} {
-        @include couleur-agencement($clr...);
-    }
-} 
 
 :root {
 
