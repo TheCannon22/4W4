@@ -8,11 +8,19 @@
     background-color: hsl(var(--hu1),var(--s-couleur-arriere),  75%);
 }
 
+.categories a{
+    color: var(--couleur-lien);
+}
+
+.categories a:hover{
+    color: var(--couleur-lien-hover);
+}
+
 .categories *{
     text-align: center;
 }
 
-.categories .post-categories{
+.post-categories{
     list-style-type: none;
     display: flex;
 }

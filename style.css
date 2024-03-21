@@ -422,7 +422,7 @@ footer ul li {
 
 .clr-agencement-primaire {
   color: hsl(220, 100%, 85%);
-  background-image: linear-gradient(90deg, hsl(220, 100%, 15%), hsl(220, 100%, 60%));
+  background-image: linear-gradient(90deg, hsl(220, 100%, 60%), hsl(220, 100%, 15%));
 }
 
 .clr-agencement-secondaire {
@@ -561,15 +561,34 @@ footer ul li {
   align-items: center;
   flex: 1 0 250px;
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
+  border-radius: 15px; /* Bordures arrondies légèrement plus prononcées */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15); /* Ombre plus prononcée */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transition sur la transformation et l'ombre */
+  overflow: hidden; /* Pour cacher les coins arrondis des enfants */
+}
+
+.carte:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
 }
 
 .carte * {
+  overflow: hidden;
   text-align: center;
 }
 
-.carte .post-categories {
+.post-categories {
   list-style-type: none;
   display: flex;
+  flex-direction: column;
+}
+
+.post-categories a {
+  color: var(--couleur-lien);
+}
+
+.post-categories a:hover {
+  color: var(--couleur-lien-hover);
 }
 
 .menu-principal-container {
@@ -646,11 +665,19 @@ footer ul li {
   background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
 }
 
+.categories a {
+  color: var(--couleur-lien);
+}
+
+.categories a:hover {
+  color: var(--couleur-lien-hover);
+}
+
 .categories * {
   text-align: center;
 }
 
-.categories .post-categories {
+.post-categories {
   list-style-type: none;
   display: flex;
 }/*# sourceMappingURL=style.css.map */
