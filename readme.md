@@ -41,5 +41,5 @@
 - Lien vers votre Github-page de la page d'accueil :
 
 
-### Ma github-page (Exercice #2)
+### Ma github-page (Exercice 2)
 https://thecannon22.github.io/4W4/
