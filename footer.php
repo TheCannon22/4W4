@@ -1,4 +1,4 @@
-<div id="footer" class="global">
+<div id="footer" class="global clr-agencement-primaire">
     <footer class="footer__section">
         <form action="" class="recherche">
             <input type="search" name="" id="" class="recherche__input" placeholder="recherche">

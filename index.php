@@ -7,7 +7,7 @@
 
 <?php get_header(); ?>
 
-<div id="entete" class="global">
+<div id="entete" class="global clr-agencement-primaire">
     <section class="entete__header">
         <!-- facebook -->
 
@@ -19,7 +19,7 @@
         <div class="entete__header__button"><button class="entete__button">Événements</button></div>
     </section>
 </div>
-<div id="accueil" class="global">
+<div id="accueil" class="global clr-agencement-primaire">
     <section class="accueil__section">
         <h2>Accueil (h2)</h2>
         <div class="section__cours">
@@ -53,10 +53,9 @@
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
-        <img src="./images/Logo_Chelsea.png" alt="Image d'accueil">
     </section>
 </div>
-<div id="galerie" class="global diagonal">
+<div id="galerie" class="global clr-agencement-primaire">
     <section class="galerie__section">
         <h2>Galerie</h2>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iste aspernatur aperiam consequatur, quidem est facere tempora! Sit saepe id ut provident vero ea consectetur sequi aspernatur eaque neque, quae sapiente ab reiciendis, recusandae iusto. Recusandae incidunt explicabo, commodi ipsam ipsum reiciendis corporis. Eius voluptatem assumenda libero dolores cupiditate repudiandae voluptas dolor minima unde expedita? Obcaecati excepturi minus laudantium velit!</p>
@@ -68,7 +67,7 @@
             </select>
     </section>
 </div>
-<div id="evenement" class="global">
+<div id="evenement" class="global clr-agencement-primaire">
     <section class="evenement__section">
         <h2>Événement</h2>
         <div>
@@ -81,7 +80,7 @@
         </video>
     </section>
 </div>
-<div id="footer" class="global">
+<div id="footer" class="global clr-agencement-primaire">
     <footer class="footer__section">
         <form action="" class="recherche">
             <input type="search" name="" id="" class="recherche__input" placeholder="recherche">
