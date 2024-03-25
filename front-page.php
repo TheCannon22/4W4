@@ -63,37 +63,37 @@
         <h2>Galerie</h2>
         <div class="destinations-carousel">
             <div class="destination">
-                <img src="images/image-paris.jpg" alt="Paris, France">
+                <img src="images/image-paris.jpg" alt="La ville de Paris">
                 <h3>Paris, France</h3>
                 <p>La ville de l'amour</p>
             </div>
             <div class="destination">
-                <img src="images/image-tokyo.jpg" alt="Tokyo, Japon">
+                <img src="images/image-tokyo.jpg" alt="La ville de Tokyo">
                 <h3>Tokyo, Japon</h3>
                 <p>La Ville du Futur</p>
             </div>
             <div class="destination">
-                <img src="images/image-dubrovnik.jpg" alt="Destination 2">
+                <img src="images/image-dubrovnik.jpg" alt="La ville de Dubrovnik">
                 <h3>Dubrovnik, Croatie</h3>
                 <p>La Perle de la Méditerranée</p>
             </div>
             <div class="destination">
-                <img src="images/image-londres.jpg" alt="Destination 2">
+                <img src="images/image-londres.jpg" alt="La ville de Londres">
                 <h3>Londres, Royaume-Uni</h3>
                 <p>La Ville du Roi</p>
             </div>
             <div class="destination">
-                <img src="images/image-moscou.jpg" alt="Destination 2">
+                <img src="images/image-moscou.jpg" alt="La ville de Moscou">
                 <h3>Moscou, Russie</h3>
                 <p>La Ville des Mille Clochers</p>
             </div>
             <div class="destination">
-                <img src="images/image-rome.jpg" alt="Destination 2">
+                <img src="images/image-rome.jpg" alt="La ville de Rome">
                 <h3>Rome, Italie</h3>
                 <p>La Ville des Empereurs</p>
             </div>
             <div class="destination">
-                <img src="images/image-guadelajara.jpg" alt="Destination 2">
+                <img src="images/image-guadelajara.jpg" alt="La ville de Guadelajara">
                 <h3>Guadelajara, Mexique</h3>
                 <p>La Perle de l'Ouest.</p>
             </div>
@@ -141,17 +141,22 @@
 
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-    const prevBtn = document.querySelector(".precedent");
-    const nextBtn = document.querySelector(".prochain");
-    const carousel = document.querySelector(".destinations-carousel");
+        const prevBtn = document.querySelector(".precedent");
+        const nextBtn = document.querySelector(".prochain");
+        const carousel = document.querySelector(".destinations-carousel");
 
-    prevBtn.addEventListener("click", function() {
-        carousel.scrollBy({ left: -250, behavior: "smooth" });
+        prevBtn.addEventListener("click", function() {
+            carousel.scrollBy({
+                left: -250,
+                behavior: "smooth"
+            });
+        });
+
+        nextBtn.addEventListener("click", function() {
+            carousel.scrollBy({
+                left: 250,
+                behavior: "smooth"
+            });
+        });
     });
-
-    nextBtn.addEventListener("click", function() {
-        carousel.scrollBy({ left: 250, behavior: "smooth" });
-    });
-});
-
 </script>

@@ -267,14 +267,18 @@ p {
 }
 .destinations-carousel {
   display: flex;
-  overflow-x: auto;
+  overflow-x: hidden;
   scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch; /* Pour la fluidité sur iOS */
 }
 
 .destination {
   flex: 0 0 auto;
-  margin-right: 10px;
+  margin: 10px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .destination img {
@@ -290,8 +294,41 @@ p {
 .controls button {
   font-size: 24px;
   cursor: pointer;
+  background-color: transparent;
+  border: none;
+  transition: color 0.3s ease;
 }
 
+.controls button:hover {
+  color: #ff5722;
+}
+
+.destination {
+  transition: transform 0.3s ease;
+}
+
+.destination:hover {
+  transform: scale(1.05);
+}
+
+.destination h3 {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+.destination p {
+  margin-top: 5px;
+  font-size: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .destinations-carousel {
+    flex-wrap: wrap;
+  }
+  .destination {
+    flex: 0 0 45%;
+  }
+}
 /* ///////////////////////////////////////////////////////////////// */
 /* Class utile                                                       */
 /* ///////////////////////////////////////////////////////////////// */
