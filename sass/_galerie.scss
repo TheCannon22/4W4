@@ -1,0 +1,20 @@
+.destinations-carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch; /* Pour la fluidité sur iOS */
+}
+
+.destination {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+.controls button {
+    font-size: 24px;
+    cursor: pointer;
+}

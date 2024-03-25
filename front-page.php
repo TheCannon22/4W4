@@ -61,26 +61,77 @@
 <div id="galerie" class="global">
     <section class="galerie__section clr-agencement-primaire">
         <h2>Galerie</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet iste aspernatur aperiam consequatur, quidem est facere tempora! Sit saepe id ut provident vero ea consectetur sequi aspernatur eaque neque, quae sapiente ab reiciendis, recusandae iusto. Recusandae incidunt explicabo, commodi ipsam ipsum reiciendis corporis. Eius voluptatem assumenda libero dolores cupiditate repudiandae voluptas dolor minima unde expedita? Obcaecati excepturi minus laudantium velit!</p>
-        <blockquote>Ça fait depuis 2 ans que je suis au TIM et j'aime beaucoup le programme et les personnes dans le programme. Je veux vraiment devenir un développeur de jeu.</pblockquote>
-            <select>
-                <option value="option1">Option 1</option>
-                <option value="option2">Option 2</option>
-                <option value="option3">Option 3</option>
-            </select>
+        <div class="destinations-carousel">
+            <div class="destination">
+                <img src="destination1.jpg" alt="Destination 1">
+                <h3>Destination 1</h3>
+                <p>Description de la destination 1...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 2</h3>
+                <p>Description de la destination 2...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 3</h3>
+                <p>Description de la destination 3...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 4</h3>
+                <p>Description de la destination 4...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 5</h3>
+                <p>Description de la destination 5...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 6</h3>
+                <p>Description de la destination 6...</p>
+            </div>
+            <div class="destination">
+                <img src="destination2.jpg" alt="Destination 2">
+                <h3>Destination 7</h3>
+                <p>Description de la destination 7...</p>
+            </div>
+        </div>
+        <div class="controls">
+            <button class="precedent">❮</button>
+            <button class="prochain">❯</button>
+        </div>
+        <blockquote>Ça fait depuis 2 ans que je suis au TIM et j'aime beaucoup le programme et les personnes dans le programme. Je veux vraiment devenir un développeur de jeu.</blockquote>
+        <a href="reserver.html" class="bouton-reservation">Réserver maintenant</a>
     </section>
 </div>
+
+
 <div id="evenement" class="global clr-agencement-primaire">
     <section class="evenement__section">
         <h2>Événement</h2>
         <div>
             <blockquote>Bienvenue au TIM! Le programme de Techniques d'Intégration Multimédia est une formation qui vise à développer les compétences nécessaires pour concevoir, créer et intégrer des contenus multimédias variés. Il combine généralement des aspects de la conception graphique, de la programmation, de la vidéo, de l'audio et d'autres éléments multimédias.</blockquote>
         </div>
-        <video controls width="400" height="300">
-            <source src="./videos/Match_Chelsea.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la balise vidéo.
-        </video>
     </section>
 </div>
 
 <?php get_footer(); ?>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const prevBtn = document.querySelector(".precedent");
+    const nextBtn = document.querySelector(".prochain");
+    const carousel = document.querySelector(".destinations-carousel");
+
+    prevBtn.addEventListener("click", function() {
+        carousel.scrollBy({ left: -250, behavior: "smooth" });
+    });
+
+    nextBtn.addEventListener("click", function() {
+        carousel.scrollBy({ left: 250, behavior: "smooth" });
+    });
+});
+
+</script>

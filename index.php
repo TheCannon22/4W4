@@ -73,11 +73,6 @@
         <div>
             <blockquote>Bienvenue au TIM! Le programme de Techniques d'Intégration Multimédia est une formation qui vise à développer les compétences nécessaires pour concevoir, créer et intégrer des contenus multimédias variés. Il combine généralement des aspects de la conception graphique, de la programmation, de la vidéo, de l'audio et d'autres éléments multimédias.</blockquote>
         </div>
-        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, earum!</p>
-        <video controls width="400" height="300">
-            <source src="./videos/Match_Chelsea.mp4" type="video/mp4">
-            Votre navigateur ne supporte pas la balise vidéo.
-        </video>
     </section>
 </div>
 <div id="footer" class="global clr-agencement-primaire">
