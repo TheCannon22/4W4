@@ -27,17 +27,17 @@
                 <div class="liens">
                     <h2>Destinations</h2>
                     <ul>
-                        <li><a href="/bariloche-argentine/">Argentine</a></li>
-                        <li><a href="/vienne-autriche/">Autriche</a></li>
-                        <li><a href="/parc-national-de-banff-canada">Canada</a></li>
-                        <li><a href="/dubrovnik-croatie/">Croatie</a></li>
-                        <li><a href="/yellowstone-national-park-etats-unis/">États-Unis</a></li>
-                        <li><a href="/paris-france/">France</a></li>
-                        <li><a href="/parc-national-des-cinque-terre-italie/">Italie</a></li>
-                        <li><a href="/mont-fuji-japon/">Japon</a></li>
-                        <li><a href="/tulum-mexique/">Mexique</a></li>
-                        <li><a href="/londres-royaume-uni/">Royaume-Uni</a></li>
-                        <li><a href="/saint-petersbourg-russie/">Russie</a></li>
+                        <li><a href="/bariloche-argentine/">Buenos Aires, Argentine</a></li>
+                        <li><a href="/vienne-autriche/">Vienne, Autriche</a></li>
+                        <li><a href="/parc-national-de-banff-canada">Montréal, Canada</a></li>
+                        <li><a href="/dubrovnik-croatie/">Dubrovnik, Croatie</a></li>
+                        <li><a href="/yellowstone-national-park-etats-unis/">New York, États-Unis</a></li>
+                        <li><a href="/paris-france/"> Paris ,France</a></li>
+                        <li><a href="/parc-national-des-cinque-terre-italie/">Rome, Italie</a></li>
+                        <li><a href="/mont-fuji-japon/">Tokyo, Japon</a></li>
+                        <li><a href="/tulum-mexique/">Guadelajara, Mexique</a></li>
+                        <li><a href="/londres-royaume-uni/">Londres, Royaume-Uni</a></li>
+                        <li><a href="/saint-petersbourg-russie/">Moscou, Russie</a></li>
                     </ul>
                 </div>
                 <div class="liens">

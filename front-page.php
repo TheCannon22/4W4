@@ -63,39 +63,59 @@
         <h2>Galerie</h2>
         <div class="destinations-carousel">
             <div class="destination">
-                <img src="destination1.jpg" alt="Destination 1">
-                <h3>Destination 1</h3>
-                <p>Description de la destination 1...</p>
+                <img src="images/image-paris.jpg" alt="Paris, France">
+                <h3>Paris, France</h3>
+                <p>La ville de l'amour</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 2</h3>
-                <p>Description de la destination 2...</p>
+                <img src="images/image-tokyo.jpg" alt="Tokyo, Japon">
+                <h3>Tokyo, Japon</h3>
+                <p>La Ville du Futur</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 3</h3>
-                <p>Description de la destination 3...</p>
+                <img src="images/image-dubrovnik.jpg" alt="Destination 2">
+                <h3>Dubrovnik, Croatie</h3>
+                <p>La Perle de la Méditerranée</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 4</h3>
-                <p>Description de la destination 4...</p>
+                <img src="images/image-londres.jpg" alt="Destination 2">
+                <h3>Londres, Royaume-Uni</h3>
+                <p>La Ville du Roi</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 5</h3>
-                <p>Description de la destination 5...</p>
+                <img src="images/image-moscou.jpg" alt="Destination 2">
+                <h3>Moscou, Russie</h3>
+                <p>La Ville des Mille Clochers</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 6</h3>
-                <p>Description de la destination 6...</p>
+                <img src="images/image-rome.jpg" alt="Destination 2">
+                <h3>Rome, Italie</h3>
+                <p>La Ville des Empereurs</p>
             </div>
             <div class="destination">
-                <img src="destination2.jpg" alt="Destination 2">
-                <h3>Destination 7</h3>
-                <p>Description de la destination 7...</p>
+                <img src="images/image-guadelajara.jpg" alt="Destination 2">
+                <h3>Guadelajara, Mexique</h3>
+                <p>La Perle de l'Ouest.</p>
+            </div>
+            <div class="destination">
+                <img src="images/image-montreal.jpg" alt="La ville de Montréal">
+                <h3>Montréal, Canada</h3>
+                <p>La Ville de la Belle Province</p>
+            </div>
+            <div class="destination">
+                <img src="images/image-vienne.jpg" alt="La ville de Vienne">
+                <h3>Vienne, Autriche</h3>
+                <p>La Ville de la Musique.</p>
+            </div>
+            <div class="destination">
+                <img src="images/image-buenos-aires.jpg" alt="La ville de Buenos Aires">
+                <h3>Buenos Aires, Argentine</h3>
+                <p>La Ville des Tango</p>
+            </div>
+            <div class="destination">
+                <img src="images/image-new-york.jpg" alt="la ville de New York">
+                <h3>New York, États-Unis</h3>
+                <p>La Grosse Pomme</p>
             </div>
         </div>
         <div class="controls">

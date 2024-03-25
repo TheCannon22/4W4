@@ -277,6 +277,12 @@ p {
   margin-right: 10px;
 }
 
+.destination img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
 .controls {
   margin-top: 10px;
 }
