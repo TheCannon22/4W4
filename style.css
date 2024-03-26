@@ -895,39 +895,53 @@ p {
   transform: translateX(0);
 }
 
-.categories {
-  padding: 2rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex: 1 0 250px;
-  background-color: hsl(var(--hu1), var(--s-couleur-arriere), 75%);
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  overflow: hidden;
-  margin: 0.5rem;
+/* Styles généraux pour la section des catégories */
+.section__categories {
+  margin-top: 20px;
 }
 
-.categories:hover {
-  transform: translateY(-5px) scale(1.02);
-  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+/* Styles pour les catégories */
+.categories {
+  background-color: #f9f9f9;
+  padding: 15px;
+  margin-bottom: 15px;
+}
+
+.categories h4 {
+  margin-top: 0;
+}
+
+.categories p {
+  margin-bottom: 5px;
 }
 
 .categories a {
-  color: var(--couleur-lien);
+  color: #007bff;
+  text-decoration: none;
 }
 
 .categories a:hover {
-  color: var(--couleur-lien-hover);
+  text-decoration: underline;
 }
 
-.categories * {
-  text-align: center;
+/* Styles spécifiques pour les appareils mobiles */
+@media only screen and (max-width: 768px) {
+  .section__categories {
+    padding: 10px;
+  }
+  .categories {
+    border-radius: 5px;
+  }
 }
-
-.post-categories {
-  list-style-type: none;
-  display: flex;
+/* Styles spécifiques pour les appareils de bureau */
+@media only screen and (min-width: 769px) {
+  .section__categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .categories {
+    flex-basis: calc(33.33% - 20px);
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -14,20 +14,25 @@
 </div>
 <div id="accueil" class="global clr-agencement-primaire">
     <section class="accueil__section">
-        <h2>Accueil (h2)</h2>
+        <h2>Accueil</h2>
         <div class="section__voyage">
-            <?php
-            if (have_posts()) :
+            <?php if (have_posts()) :
                 while (have_posts()) : the_post(); ?>
                     <div class="carte">
                         <h4><?php the_title(); ?></h4>
                         <p><?php echo wp_trim_words(get_the_content(), 30); ?></p>
-                        <p> <a href="<?php echo get_permalink(); ?>"> Voir la suite </a></p>
+                        <p><a href="<?php echo get_permalink(); ?>">Voir la suite</a></p>
                         <?php the_category(); ?>
                     </div>
-                <?php endwhile;
-            endif;
+            <?php endwhile;
+            endif; ?>
+        </div>
 
+        
+        <h2>Les catégories</h2>
+
+        <div class="section__categories">
+            <?php
             // Récupérer les catégories
             $categories = get_categories();
 
@@ -39,7 +44,7 @@
                 $category_link = get_category_link($category->term_id);
                 // Récupérer le nombre d'articles pour cette catégorie
                 $category_count = $category->count;
-                ?>
+            ?>
                 <div class="categories">
                     <h4><?php echo $category->name; ?></h4>
                     <p><?php echo $category_description; ?></p>
@@ -47,8 +52,8 @@
                     <p><?php echo $category_count; ?> articles</p>
                 </div>
             <?php } ?>
-
         </div>
+
     </section>
 </div>
 <div id="galerie" class="global">
@@ -140,7 +145,7 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                            Merci bla bla bla
+                        Merci bla bla bla
                     </div>
                 </div>
                 <div class="liste-commentaire">
@@ -159,16 +164,16 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                            Merci bla bla bla
+                        Merci bla bla bla
                     </div>
                 </div>
                 <form action="" class="boite-de-commentaire">
-                        <div class="utilisateur">
-                            <div class="image"><img src="images/Alexander_Rankov.JPG" alt="Ceci est une photo d'Alexander"></div>
-                            <div class="name">Alexander</div>
-                        </div>
-                        <textarea name="commentaire"></textarea>
-                        <button class="commentaire-soumission">Soumettre</button>
+                    <div class="utilisateur">
+                        <div class="image"><img src="images/Alexander_Rankov.JPG" alt="Ceci est une photo d'Alexander"></div>
+                        <div class="name">Alexander</div>
+                    </div>
+                    <textarea name="commentaire"></textarea>
+                    <button class="commentaire-soumission">Soumettre</button>
                 </form>
             </div>
         </div>
