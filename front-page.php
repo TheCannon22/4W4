@@ -1,9 +1,3 @@
-<head>
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
-
-
-</head>
-
 <?php get_header(); ?>
 
 <div id="entete" class="global clr-agencement-primaire">
@@ -121,8 +115,6 @@
             <button class="precedent">❮</button>
             <button class="prochain">❯</button>
         </div>
-        <blockquote>Ça fait depuis 2 ans que je suis au TIM et j'aime beaucoup le programme et les personnes dans le programme. Je veux vraiment devenir un développeur de jeu.</blockquote>
-        <a href="reserver.html" class="bouton-reservation">Réserver maintenant</a>
     </section>
 </div>
 
