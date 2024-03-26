@@ -41,12 +41,10 @@ $defaut: (
         400: $--clr-vert-fonce )
 );
 
-$agencement-couleur :(
-    primaire: ($--clr-bleu-pale, ($--clr-bleu-leger, $--clr-bleu-fonce)),
+$agencement-couleur :(primaire: ($--clr-bleu-pale, ($--clr-bleu-leger, $--clr-bleu-fonce)),
     secondaire: ($--clr-orange-fonce, $--clr-orange-pale),
     ternaire: ($--clr-rouge-fonce, $--clr-rouge-pale),
-    vert: ($--clr-vert-fonce, $--clr-vert-pale)
-);
+    vert: ($--clr-vert-fonce, $--clr-vert-pale));
 
 :root {
 

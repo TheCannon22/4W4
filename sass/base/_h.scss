@@ -4,12 +4,19 @@
 /*https://developer.mozilla.org/en-US/docs/Web/CSS/clamp*/
 
 
-h1,h2,h3,h4,h5,h6{    
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     display: flex;
     justify-content: center;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     color: rgb(255, 255, 255);
 }
 
@@ -25,7 +32,9 @@ h3 {
     font-size: clamp(1.25rem, 1.25rem + 2.5vw, 2.125rem);
 }
 
-h4, h5, p {
+h4,
+h5,
+p {
     font-size: clamp(0.9rem, 0.9rem + 1vw, 1.25rem);
 }
 

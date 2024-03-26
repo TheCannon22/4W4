@@ -47,7 +47,7 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                            Merci bla bla bla
+                        Merci bla bla bla
                     </div>
                 </div>
                 <div class="liste-commentaire">
@@ -66,16 +66,16 @@
                         </div>
                     </div>
                     <div class="commentaire">
-                            Merci bla bla bla
+                        Merci bla bla bla
                     </div>
                 </div>
                 <form action="" class="boite-de-commentaire">
-                        <div class="utilisateur">
-                            <div class="image"><img src="images/Alexander_Rankov.JPG" alt="Ceci est une photo d'Alexander"></div>
-                            <div class="name">Alexander</div>
-                        </div>
-                        <textarea name="commentaire"></textarea>
-                        <button class="commentaire-soumission">Soumettre</button>
+                    <div class="utilisateur">
+                        <div class="image"><img src="images/Alexander_Rankov.JPG" alt="Ceci est une photo d'Alexander"></div>
+                        <div class="name">Alexander</div>
+                    </div>
+                    <textarea name="commentaire"></textarea>
+                    <button class="commentaire-soumission">Soumettre</button>
                 </form>
             </div>
         </div>

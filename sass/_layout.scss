@@ -5,17 +5,18 @@ body {
   box-sizing: border-box;
 }
 
-.global > a{
+.global>a {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.global>section, .global>footer {
+.global>section,
+.global>footer {
   flex: 0 1 1100px;
   padding: 5rem;
 }
-  
+
 blockquote {
   border-left: 4px solid var(--couleur-bouton-linear-gradient-1);
   margin: 20px 0;
@@ -42,7 +43,7 @@ blockquote {
   align-items: center;
 }
 
-.accueil__section img{
+.accueil__section img {
   margin-top: 20px;
   width: 300px;
 }
@@ -70,4 +71,3 @@ blockquote {
   flex-direction: column;
   align-items: center;
 }
-  

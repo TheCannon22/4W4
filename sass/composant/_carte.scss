@@ -1,83 +1,73 @@
-/* Style général pour la section voyage */
 .section__voyage {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-/* Style pour chaque carte de voyage */
 .carte {
-    width: calc(50% - 20px); /* 50% de largeur avec un espacement de 20px entre les cartes */
-    margin-bottom: 40px;
-    padding: 20px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: calc(50% - 20px);
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* Style pour le titre */
 .carte h4 {
-    font-size: 18px;
-    margin-bottom: 10px;
+  font-size: 18px;
+  margin-bottom: 10px;
 }
 
-/* Style pour le contenu */
 .carte p {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 15px;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 15px;
 }
 
-/* Style pour le lien "Voir la suite" */
 .carte a {
-    color: #007bff;
-    text-decoration: none;
+  color: #007bff;
+  text-decoration: none;
 }
 
-/* Style pour les catégories */
 .carte .cat-links {
-    margin-top: 10px;
-    font-style: italic;
+  margin-top: 10px;
+  font-style: italic;
 }
 
-/* Media queries pour les petits écrans */
 @media (max-width: 768px) {
-    .carte {
-        width: calc(100% - 20px); /* Pleine largeur avec un espacement de 20px */
-    }
+  .carte {
+    width: calc(100% - 20px);
+  }
 }
 
-
-  /* Styles pour les post-categories */
 .post-categories {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .post-categories li {
-    margin-right: 10px;
-    margin-bottom: 5px;
-  }
-  
-  .post-categories li:last-child {
-    margin-right: 0;
-  }
-  
-  .post-categories a {
-    text-decoration: none;
-    background-color: #ddd;
-    color: #333;
-    padding: 5px 10px;
-    border-radius: 5px;
-  }
-  
-  .post-categories a:hover {
-    background-color: #aaa;
-    color: #fff;
-  }
-  
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-categories li {
+  margin-right: 10px;
+  margin-bottom: 5px;
+}
+
+.post-categories li:last-child {
+  margin-right: 0;
+}
+
+.post-categories a {
+  text-decoration: none;
+  background-color: #ddd;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+
+.post-categories a:hover {
+  background-color: #aaa;
+  color: #fff;
+}

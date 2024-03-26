@@ -28,7 +28,7 @@
             endif; ?>
         </div>
 
-        
+
         <h2>Les catégories</h2>
 
         <div class="section__categories">

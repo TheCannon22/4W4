@@ -3,11 +3,12 @@ a {
     text-decoration: none;
     transition: color 0.3s ease;
 
-    &:hover,&:focus {
+    &:hover,
+    &:focus {
         color: var(--couleur-lien-hover);
     }
 
-    &:visited{
+    &:visited {
         // color: var(--couleur-lien-visited);
     }
 }

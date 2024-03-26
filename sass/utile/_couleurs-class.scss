@@ -21,13 +21,16 @@
 
 // Définit la règle de style à partir d'une couleur de texte $clr et une ou plusieurs couleurs en background $bck
 
-@mixin couleur-agencement($clr,$bck){
+@mixin couleur-agencement($clr, $bck) {
     color: $clr;
-    @if(list.length($bck)==1){
+
+    @if(list.length($bck)==1) {
         background-color: $bck;
-    }   @else {
+    }
+
+    @else {
         background-image: linear-gradient(90deg, $bck);
-    }   
+    }
 }
 
 // Création de l'ensemble de règle de style d'agencement de couleurs
@@ -35,4 +38,4 @@
     .clr-agencement-#{$valeur} {
         @include couleur-agencement($clr...);
     }
-} 
+}
