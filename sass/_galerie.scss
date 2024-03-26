@@ -23,6 +23,7 @@
 
 .controls {
   margin-top: 10px;
+  display: none;
 }
 
 .controls button {
@@ -53,6 +54,12 @@
 .destination p {
   margin-top: 5px;
   font-size: 1rem;
+}
+
+@media screen and (min-width:768px) {
+  .controls{
+    display: block;
+  }
 }
 
 @media screen and (max-width: 768px) {
